@@ -11,11 +11,11 @@
         Et c'est avec ces vidéos que vous allez pouvoir accrocher votre
         audience.
       </p>
-      <button>
-        Lorem
+      <button @click="scrollVideo()">
+        La preuve
       </button>
       <p class="sub">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        Spécialisés dans la réalisation de Motion Design 2D et 3D
       </p>
       <img
         src="~assets/images/logos/tatchi_studio.svg"
@@ -24,7 +24,7 @@
       />
     </div>
     <div class="videoContainer">
-      <h2>Lorem ipsum</h2>
+      <h2>Un nouveau chapitre commence ici.</h2>
       <div class="centerContainer">
         <div class="video"></div>
       </div>
@@ -36,7 +36,7 @@
     <div class="ourPoints">
       <EscalatorComponent
         title="Transparent"
-        text="Nos productions sont des outils au service de votre croissance. Chiffres à l’appui."
+        text="Vous disposez de votre espace de suivi de projet pour connaître à tous moments l’avancé de votre production."
         slug="transparent"
         side="left"
       />
@@ -54,7 +54,7 @@
       />
       <EscalatorComponent
         title="Original"
-        text="Nos productions sont des outils au service de votre croissance. Chiffres à l’appui."
+        text="Une création sur mesure pour obtenir toute l’attention de votre audience."
         slug="original"
         side="right"
       />
@@ -64,20 +64,31 @@
       <Formule />
     </div>
     <Avis />
+    <BackTop />
   </div>
 </template>
 
 <script>
+import animateScrollTo from 'animated-scroll-to'
 import HomeTopParallax from '@/components/index/HomeTopParallax'
 import EscalatorComponent from '@/components/index/EscalatorComponent'
 import Formule from '@/components/index/Formule'
 import Avis from '@/components/index/Avis'
+import BackTop from '@/components/index/BackTop'
 export default {
   components: {
     HomeTopParallax,
     EscalatorComponent,
     Formule,
     Avis,
+    BackTop,
+  },
+  methods: {
+    scrollVideo() {
+      animateScrollTo(document.querySelector('.videoContainer'), {
+        minDuration: 1200,
+      })
+    },
   },
 }
 </script>
@@ -120,6 +131,11 @@ export default {
     color #d0d0d0
     font-weight bold
     font-size 16px
+    cursor pointer
+    outline none
+    transition 0.42s transform ease
+    &:hover
+      transform scale(0.96)
   & img
     height 54px
 

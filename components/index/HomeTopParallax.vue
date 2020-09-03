@@ -1,7 +1,9 @@
 <template>
   <div class="bgTopHome">
-    <img src="~assets/images/sphere.png" alt="" />
-    <img src="~assets/images/sphere.png" alt="" />
+    <div class="spheres"></div>
+    <div class="spheres"></div>
+    <!-- <img src="~assets/images/sphere.png" alt="" />
+    <img src="~assets/images/sphere.png" alt="" /> -->
   </div>
 </template>
 
@@ -20,7 +22,7 @@ export default {
       let lastScroll = 0
       let valueY = 0
       const imageDiv = document.querySelector('.bgTopHome')
-      const img = imageDiv.querySelectorAll('img')
+      const img = imageDiv.querySelectorAll('.spheres')
       sizes.width = window.innerWidth
       sizes.height = window.innerHeight
       document.addEventListener('resize', () => {
@@ -55,15 +57,20 @@ export default {
 .bgTopHome
   z-index -1
   pointer-events none
-  & img
+  & .spheres
+    background-color #f0f0f0
+    border-radius 50%
+    box-shadow -1px -3px 8px inset #ffffff, 20px 10px 30px inset rgba(255,255,255,0.6), -15px -40px 80px inset rgba(0,0,0,0.3)
     &:first-child
       height 200px
+      width 200px
       position absolute
       top 20%
       left 35%
       // transform translateX(-50%)
     &:last-child
       height 400px
+      width 400px
       position absolute
       top 30%
       left 41%
