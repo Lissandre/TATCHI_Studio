@@ -2,8 +2,6 @@
   <div class="bgTopHome">
     <div class="spheres"></div>
     <div class="spheres"></div>
-    <!-- <img src="~assets/images/sphere.png" alt="" />
-    <img src="~assets/images/sphere.png" alt="" /> -->
   </div>
 </template>
 
@@ -48,6 +46,10 @@ export default {
         img[1].style.transform = `translate(${translate.x1}px,${translate.y1}px)`
         lastScroll = dist
       })
+      document.addEventListener('mouseleave', function () {
+        img[0].style.transform = `translate(0px,${valueY}px)`
+        img[1].style.transform = `translate(0px,${-valueY}px)`
+      })
     },
   },
 }
@@ -61,18 +63,17 @@ export default {
     background-color #f0f0f0
     border-radius 50%
     box-shadow -1px -3px 8px inset #ffffff, 20px 10px 30px inset rgba(255,255,255,0.6), -15px -40px 80px inset rgba(0,0,0,0.3)
+    transition 0.3s transform ease-out
     &:first-child
       height 200px
       width 200px
       position absolute
       top 20%
       left 35%
-      // transform translateX(-50%)
     &:last-child
       height 400px
       width 400px
       position absolute
       top 30%
       left 41%
-      // transform translateX(-50%)
 </style>

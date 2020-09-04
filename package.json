@@ -16,7 +16,8 @@
     "animated-scroll-to": "^2.0.10",
     "lottie-web": "^5.7.3",
     "nuxt": "^2.14.0",
-    "vue-lottie-player": "^0.1.9"
+    "vue-lottie-player": "^0.1.9",
+    "vue-vimeo-player": "^0.1.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

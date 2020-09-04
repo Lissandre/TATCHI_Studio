@@ -11,7 +11,7 @@
         Et c'est avec ces vidéos que vous allez pouvoir accrocher votre
         audience.
       </p>
-      <button @click="scrollVideo()">
+      <button @click="scrollVideo(), play()">
         La preuve
       </button>
       <p class="sub">
@@ -26,7 +26,17 @@
     <div class="videoContainer">
       <h2>Un nouveau chapitre commence ici.</h2>
       <div class="centerContainer">
-        <div class="video"></div>
+        <div class="video">
+          <client-only>
+            <vueVimeoPlayer
+              ref="player"
+              :video-id="videoID"
+              :player-height="height"
+              :player-width="width"
+              @ready="onReady"
+            />
+          </client-only>
+        </div>
       </div>
       <h2>
         Si une image vaut mille mots, un motion <br />
@@ -59,6 +69,7 @@
         side="right"
       />
     </div>
+    <Numbers />
     <div class="formule">
       <h2>La formule.</h2>
       <Formule />
@@ -71,23 +82,45 @@
 <script>
 import animateScrollTo from 'animated-scroll-to'
 import HomeTopParallax from '@/components/index/HomeTopParallax'
+import { vueVimeoPlayer } from 'vue-vimeo-player'
 import EscalatorComponent from '@/components/index/EscalatorComponent'
+import Numbers from '@/components/index/Numbers'
 import Formule from '@/components/index/Formule'
 import Avis from '@/components/index/Avis'
-import BackTop from '@/components/index/BackTop'
+import BackTop from '@/components/global/BackTop'
 export default {
   components: {
     HomeTopParallax,
+    vueVimeoPlayer,
     EscalatorComponent,
+    Numbers,
     Formule,
     Avis,
     BackTop,
+  },
+  data() {
+    return {
+      videoID: '154361196',
+      height: 630,
+      width: 1124,
+      options: {},
+      playerReady: false,
+    }
   },
   methods: {
     scrollVideo() {
       animateScrollTo(document.querySelector('.videoContainer'), {
         minDuration: 1200,
       })
+    },
+    onReady() {
+      this.playerReady = true
+    },
+    play() {
+      this.$refs.player.play()
+    },
+    stop() {
+      this.$refs.player.stop()
     },
   },
 }
