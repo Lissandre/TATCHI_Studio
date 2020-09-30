@@ -8,7 +8,7 @@
     </div>
     <div class="bloc">
       <div>
-        <p>76,5<span>%</span></p>
+        <p>76<span>%</span></p>
       </div>
       <p>
         Des dirigeants d’entreprises ayant utilisé la vidéo qui constate un
@@ -62,23 +62,25 @@ export default {
   & div
     position relative
     & p
-      font-weight bolder
-      font-size 400px
+      font-weight 900
+      font-size 360px
       letter-spacing -36px
       color #FFFFFF
       text-shadow -20px 20px 60px #E3E3E3
+      width fit-content
+      vertical-align sub
       line-height 1
-      position relative
-      width inherit
       & span
-        bottom 0
-        position absolute
+        position relative
+        right 5%
         color #575757
+        font-weight 600
         font-size 74px
         letter-spacing normal
-        transform translate(-70%, -65%)
   & p
     color #D0D0D0
-    font-size 30px
+    font-size 24px
+    font-weight 600
     width 40%
+    transform translateY(16%)
 </style>

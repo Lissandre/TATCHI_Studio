@@ -6,10 +6,13 @@
   </div>
 </template>
 
+<script>
+export default {}
+</script>
+
 <style lang="stylus">
 html
-  font-family 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif
+  font-family 'Nexa'
   font-size 16px
   word-spacing 1px
   -ms-text-size-adjust 100%
@@ -30,7 +33,9 @@ a
 
 #defaultLayout
   & .content
-    padding 0 16%
+    // padding 0 16%
+    width 1124px
+    margin 0 auto
     min-height 95vh
 
 ::selection
@@ -42,4 +47,66 @@ a
   color #fff
   background #000
   outline-color #000
+
+
+.default-enter
+	& ~ .overlay-right
+		width 100vw
+.default-enter-active ~ .overlay-right, .default-leave-active ~ .overlay-right
+	width 100vw
+.default-enter-active
+	& ~ .overlay-right
+		transition-timing-function ease-in
+.default-enter-active ~ .overlay-right, .default-enter-to ~ .overlay-right
+	display none
+.default-enter-to
+	& ~ .overlay-left
+		width 0
+.default-leave-active
+	& ~ .overlay-left
+		transition-timing-function ease
+.default-enter ~ .overlay-left, .default-enter-active ~ .overlay-left, .default-enter-to ~ .overlay-left
+	transition-duration unset !important
+	width 100vw
+.default-enter-active, .default-leave-active
+	transition-duration 0.35s
+
+
+// .default-enter ~ .overlay-right {
+//   width: 100vw;
+// }
+
+// .default-enter-active ~ .overlay-right,
+// .default-leave-active ~ .overlay-right {
+//   width: 100vw;
+// }
+
+// .default-enter-active ~ .overlay-right {
+//   transition-timing-function: ease-in;
+// }
+
+// .default-enter-active ~ .overlay-right,
+// .default-enter-to ~ .overlay-right {
+//   display: none;
+// }
+
+// .default-enter-to ~ .overlay-left {
+//   width: 0;
+// }
+
+// .default-leave-active ~ .overlay-left {
+//   transition-timing-function: ease;
+// }
+
+// .default-enter ~ .overlay-left,
+// .default-enter-active ~ .overlay-left,
+// .default-enter-to ~ .overlay-left {
+//   transition-duration: unset !important;
+//   width: 100vw;
+// }
+
+// .default-enter-active,
+// .default-leave-active {
+//   transition-duration: 0.35s;
+// }
 </style>

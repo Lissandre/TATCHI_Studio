@@ -104,6 +104,7 @@ export default {
     height 70%
     transform translateY(4%)
     z-index 0
+    will-change transform
     transition 0.3s transform ease-out
 
 .spheres
@@ -117,6 +118,7 @@ export default {
     border-radius 50%
     box-shadow -1px -3px 8px inset #ffffff, 10px 5px 20px inset rgba(255,255,255,0.6), -10px -20px 25px inset rgba(0,0,0,0.2)
     transition 0.3s transform ease-out
+    will-change transform
     &:first-child
       height 110px
       width 110px

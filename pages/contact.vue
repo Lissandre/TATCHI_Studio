@@ -104,6 +104,7 @@ export default {
       padding 20px
       resize vertical
       outline-color #000000
+      font-family 'Nexa'
     & input[type=submit]
       width 30%
       border none

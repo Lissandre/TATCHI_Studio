@@ -64,6 +64,7 @@ export default {
     border-radius 50%
     box-shadow -1px -3px 8px inset #ffffff, 20px 10px 30px inset rgba(255,255,255,0.6), -15px -40px 80px inset rgba(0,0,0,0.3)
     transition 0.3s transform ease-out
+    will-change transform
     &:first-child
       height 200px
       width 200px

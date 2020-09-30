@@ -27,9 +27,13 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
+   ** Customize the progress-bar color
+   */
+  loading: '~/components/global/Loader.vue',
+  /*
    ** Global CSS
    */
-  css: [],
+  css: ['~layouts/global.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -71,4 +75,5 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  // loading: { color: '#000000' },
 }

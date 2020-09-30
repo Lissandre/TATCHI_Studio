@@ -75,7 +75,11 @@ export default {
     width 200px
     overflow hidden
     opacity 0.5
+    margin 0 30px
     & svg
+      transform scale(1.5) !important
+      will-change transform
+    &.memorable svg
       transform scale(3) !important
       will-change transform
   &.right
