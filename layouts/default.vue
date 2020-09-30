@@ -1,13 +1,33 @@
 <template>
   <div id="defaultLayout">
-    <Header />
-    <Nuxt class="content" />
-    <Footer />
+    <vuescroll :ops="ops">
+      <Header />
+      <Nuxt class="content" />
+      <BackTop />
+      <Footer />
+    </vuescroll>
   </div>
 </template>
 
 <script>
-export default {}
+import vuescroll from 'vuescroll'
+export default {
+  components: {
+    vuescroll,
+  },
+  data() {
+    return {
+      ops: {
+        vuescroll: {},
+        scrollPanel: {},
+        rail: {},
+        bar: {
+          background: '#000000',
+        },
+      },
+    }
+  },
+}
 </script>
 
 <style lang="stylus">
@@ -24,7 +44,6 @@ html
 a
   text-decoration none
   color currentColor
-
 *,
 *::before,
 *::after
@@ -32,6 +51,8 @@ a
   margin 0
 
 #defaultLayout
+  height 100vh
+  width 100%
   & .content
     // padding 0 16%
     width 1124px
@@ -47,66 +68,4 @@ a
   color #fff
   background #000
   outline-color #000
-
-
-.default-enter
-	& ~ .overlay-right
-		width 100vw
-.default-enter-active ~ .overlay-right, .default-leave-active ~ .overlay-right
-	width 100vw
-.default-enter-active
-	& ~ .overlay-right
-		transition-timing-function ease-in
-.default-enter-active ~ .overlay-right, .default-enter-to ~ .overlay-right
-	display none
-.default-enter-to
-	& ~ .overlay-left
-		width 0
-.default-leave-active
-	& ~ .overlay-left
-		transition-timing-function ease
-.default-enter ~ .overlay-left, .default-enter-active ~ .overlay-left, .default-enter-to ~ .overlay-left
-	transition-duration unset !important
-	width 100vw
-.default-enter-active, .default-leave-active
-	transition-duration 0.35s
-
-
-// .default-enter ~ .overlay-right {
-//   width: 100vw;
-// }
-
-// .default-enter-active ~ .overlay-right,
-// .default-leave-active ~ .overlay-right {
-//   width: 100vw;
-// }
-
-// .default-enter-active ~ .overlay-right {
-//   transition-timing-function: ease-in;
-// }
-
-// .default-enter-active ~ .overlay-right,
-// .default-enter-to ~ .overlay-right {
-//   display: none;
-// }
-
-// .default-enter-to ~ .overlay-left {
-//   width: 0;
-// }
-
-// .default-leave-active ~ .overlay-left {
-//   transition-timing-function: ease;
-// }
-
-// .default-enter ~ .overlay-left,
-// .default-enter-active ~ .overlay-left,
-// .default-enter-to ~ .overlay-left {
-//   transition-duration: unset !important;
-//   width: 100vw;
-// }
-
-// .default-enter-active,
-// .default-leave-active {
-//   transition-duration: 0.35s;
-// }
 </style>

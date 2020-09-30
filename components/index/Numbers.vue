@@ -44,7 +44,7 @@ export default {
 <style lang="stylus" scoped>
 .bloc
   display flex
-  align-items center
+  align-items flex-end
   justify-content start
   margin 25% 0
   &:nth-child(2n-1)
@@ -82,5 +82,7 @@ export default {
     font-size 24px
     font-weight 600
     width 40%
-    transform translateY(16%)
+    transform translateY(36%)
+    line-height 1
+    vertical-align sub
 </style>

@@ -11,7 +11,7 @@
         Et c'est avec ces vidéos que vous allez pouvoir accrocher votre
         audience.
       </p>
-      <button @click="scrollVideo(), play()">
+      <button @click="play(), scrollVideo()">
         La preuve
       </button>
       <p class="sub">
@@ -27,6 +27,7 @@
       <h2>Un nouveau chapitre commence ici.</h2>
       <div class="centerContainer">
         <div class="video">
+          <div class="trickVideo"></div>
           <client-only>
             <vueVimeoPlayer
               ref="player"
@@ -75,19 +76,16 @@
       <Formule />
     </div>
     <Avis />
-    <BackTop />
   </div>
 </template>
 
 <script>
-import animateScrollTo from 'animated-scroll-to'
 import HomeTopParallax from '@/components/index/HomeTopParallax'
 import { vueVimeoPlayer } from 'vue-vimeo-player'
 import EscalatorComponent from '@/components/index/EscalatorComponent'
 import Numbers from '@/components/index/Numbers'
 import Formule from '@/components/index/Formule'
 import Avis from '@/components/index/Avis'
-import BackTop from '@/components/global/BackTop'
 export default {
   components: {
     HomeTopParallax,
@@ -96,7 +94,6 @@ export default {
     Numbers,
     Formule,
     Avis,
-    BackTop,
   },
   data() {
     return {
@@ -109,9 +106,12 @@ export default {
   },
   methods: {
     scrollVideo() {
-      animateScrollTo(document.querySelector('.videoContainer'), {
-        minDuration: 1200,
-      })
+      // Scrollbar.get(document.querySelector('#defaultLayout')).scrollIntoView(
+      //   document.querySelector('.videoContainer'),
+      //   1200
+      // )
+      // eslint-disable-next-line
+      this.$refs['vs'].scrollIntoView('.videoContainer', 1200)
     },
     onReady() {
       this.playerReady = true
@@ -182,6 +182,14 @@ export default {
       background #fafafa
       height 630px
       width 1124px
+      position relative
+      & .trickVideo
+        position absolute
+        top 0
+        left 0
+        height 100%
+        width 100%
+        pointer-events none
 
 .formule
   margin-bottom 300px
@@ -192,7 +200,7 @@ h2
   margin-bottom 100px
 
 .ourPoints
-  background-image url(../assets/images/bgEsc.png)
+  // background-image url(../assets/images/bgEsc.png)
   background-size contain
   background-repeat no-repeat
   background-position 40% center

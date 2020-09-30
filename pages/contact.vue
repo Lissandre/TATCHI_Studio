@@ -55,17 +55,12 @@
         <img src="~assets/images/pic2.png" alt="" />
       </div>
     </div>
-    <BackTop />
   </div>
 </template>
 
 <script>
-import BackTop from '@/components/global/BackTop'
 export default {
   name: 'Contact',
-  components: {
-    BackTop,
-  },
 }
 </script>
 

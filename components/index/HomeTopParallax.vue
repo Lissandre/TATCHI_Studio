@@ -69,12 +69,12 @@ export default {
       height 200px
       width 200px
       position absolute
-      top 20%
+      top 20vh
       left 35%
     &:last-child
       height 400px
       width 400px
       position absolute
-      top 30%
+      top 30vh
       left 41%
 </style>
