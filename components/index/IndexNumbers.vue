@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: 'Numbers',
+  name: 'IndexNumbers',
   data() {
     return {}
   },

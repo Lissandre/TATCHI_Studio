@@ -1,33 +1,38 @@
 <template>
-  <div class="formulePoints">
-    <div class="formulePoint">
-      <h4>1. Brief</h4>
-      <p>Une bonne conversation s'impose</p>
-    </div>
-    <div class="middle">
+  <div class="formule">
+    <h2>La formule.</h2>
+    <div class="formulePoints">
       <div class="formulePoint">
-        <h4>2. Scénario</h4>
-        <p>Écrivons votre histoire</p>
+        <h4>1. Brief</h4>
+        <p>Une bonne conversation s'impose</p>
       </div>
-      <div class="formulePoint">
-        <h4>3. Illustration</h4>
-        <p>Nos meilleurs coups de crayons</p>
+      <div class="middle">
+        <div class="formulePoint">
+          <h4>2. Scénario</h4>
+          <p>Écrivons votre histoire</p>
+        </div>
+        <div class="formulePoint">
+          <h4>3. Illustration</h4>
+          <p>Nos meilleurs coups de crayons</p>
+        </div>
       </div>
-    </div>
-    <div class="formulePoint last">
-      <h4>4. Animation</h4>
-      <p>Maintenant, il faut que ça bouge !</p>
+      <div class="formulePoint last">
+        <h4>4. Animation</h4>
+        <p>Maintenant, il faut que ça bouge !</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Formule',
+  name: 'IndexFormule',
 }
 </script>
 
 <style lang="stylus" scoped>
+.formule
+  margin-bottom 300px
 .formulePoints
   padding-top 100px
   display flex

@@ -14,7 +14,7 @@
 <script>
 import lottie from 'lottie-web'
 export default {
-  name: 'EscalatorComponent',
+  name: 'IndexOurPointsBox',
   props: {
     title: {
       type: String,

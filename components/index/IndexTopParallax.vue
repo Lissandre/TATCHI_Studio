@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'HomeTopParallax',
+  name: 'IndexTopParallax',
   // eslint-disable-next-line
   mounted: function() {
     this.parallax()

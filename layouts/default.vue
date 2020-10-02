@@ -1,33 +1,14 @@
 <template>
   <div id="defaultLayout">
-    <vuescroll :ops="ops">
-      <Header />
-      <Nuxt class="content" />
-      <BackTop />
-      <Footer />
-    </vuescroll>
+    <Header />
+    <Nuxt class="content" />
+    <BackTop />
+    <Footer />
   </div>
 </template>
 
 <script>
-import vuescroll from 'vuescroll'
-export default {
-  components: {
-    vuescroll,
-  },
-  data() {
-    return {
-      ops: {
-        vuescroll: {},
-        scrollPanel: {},
-        rail: {},
-        bar: {
-          background: '#000000',
-        },
-      },
-    }
-  },
-}
+export default {}
 </script>
 
 <style lang="stylus">

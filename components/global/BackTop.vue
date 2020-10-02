@@ -7,12 +7,12 @@
 </template>
 
 <script>
+import animateScrollTo from 'animated-scroll-to'
 export default {
   name: 'BackTop',
   methods: {
     toTop() {
-      // eslint-disable-next-line
-      scrollTo({ x: 0, y: 0 }, 1800, 'easeOutQuad')
+      animateScrollTo(0)
     },
   },
 }

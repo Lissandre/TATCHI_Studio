@@ -1,19 +1,19 @@
 <template>
   <div class="container">
     <div class="slider">
-      <div class="leftArrow" @click="changeAvis(-1)"></div>
-      <div class="avis">
+      <div class="leftArrow" @click="changeReview(-1)"></div>
+      <div class="review">
         <h5>
           <span>
-            {{ avis.name[count - 1] }}
+            {{ review.name[count - 1] }}
           </span>
-          « {{ avis.shortDesc[count - 1] }} »
+          « {{ review.shortDesc[count - 1] }} »
         </h5>
         <p>
-          {{ avis.text[count - 1] }}
+          {{ review.text[count - 1] }}
         </p>
       </div>
-      <div class="rightArrow" @click="changeAvis(+1)"></div>
+      <div class="rightArrow" @click="changeReview(+1)"></div>
     </div>
     <p class="count">{{ count }} <span>/</span> {{ total }}</p>
   </div>
@@ -21,12 +21,12 @@
 
 <script>
 export default {
-  name: 'Avis',
+  name: 'IndexReviews',
   data() {
     return {
       count: 1,
       total: 2,
-      avis: {
+      review: {
         name: ['Aimé Césaire', 'Le Dev'],
         shortDesc: [
           'Projet patati fait le patata',
@@ -40,7 +40,7 @@ export default {
     }
   },
   methods: {
-    changeAvis(value) {
+    changeReview(value) {
       if (value === -1) {
         this.count + value < 1 ? (this.count = this.total) : this.count--
       } else {
@@ -62,7 +62,7 @@ export default {
     align-items center
     justify-content space-between
     margin-bottom 67px
-    & .avis
+    & .review
       text-align center
       & h5
         font-weight bolder
