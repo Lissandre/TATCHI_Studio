@@ -52,10 +52,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-h2
-  font-size 56px
-  font-weight 200
-  margin-bottom 100px
 .videoContainer
   margin-bottom 150px
 .centerContainer

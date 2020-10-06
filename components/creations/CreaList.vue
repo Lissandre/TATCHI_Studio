@@ -28,6 +28,7 @@ export default {
   display flex
   justify-content space-between
   flex-wrap wrap
+  margin-bottom 300px
   &.flexBreak::after
     content ''
     flex auto

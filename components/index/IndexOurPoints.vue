@@ -35,16 +35,11 @@
 
 <script>
 export default {
-  name: 'IndexOurPoints'
+  name: 'IndexOurPoints',
 }
 </script>
 
 <style lang="stylus" scoped>
-h2
-  font-size 56px
-  font-weight 200
-  margin-bottom 100px
-
 .ourPoints
   // background-image url(../assets/images/bgEsc.png)
   background-size contain

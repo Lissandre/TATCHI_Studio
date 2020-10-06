@@ -32,7 +32,8 @@ export default {
 
 <style lang="stylus" scoped>
 .formule
-  margin-bottom 300px
+  padding-top 300px
+  margin-bottom 500px
 .formulePoints
   padding-top 100px
   display flex

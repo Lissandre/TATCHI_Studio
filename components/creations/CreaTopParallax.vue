@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'CreaParallax',
+  name: 'CreaTopParallax',
   data() {
     return {
       translate: {

@@ -11,14 +11,17 @@
     "lint": "npm run lint:js -- --fix"
   },
   "dependencies": {
-    "@nuxt/content": "^1.5.0",
     "@nuxtjs/axios": "^5.12.0",
+    "@nuxtjs/markdownit": "^1.2.7",
+    "@nuxtjs/strapi": "^0.1.6",
+    "graphql": "^14.5.8",
+    "moment": "^2.29.0",
+    "nuxt": "^2.14.0",
+    "uikit": "^3.2.3",
     "animated-scroll-to": "^2.0.10",
     "lottie-web": "^5.7.3",
-    "nuxt": "^2.14.0",
     "vue-lottie-player": "^0.1.9",
-    "vue-vimeo-player": "^0.1.0",
-    "vuescroll": "^4.16.1"
+    "vue-vimeo-player": "^0.1.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

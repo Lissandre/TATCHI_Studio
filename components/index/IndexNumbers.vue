@@ -46,7 +46,18 @@ export default {
   display flex
   align-items flex-end
   justify-content start
-  margin 25% 0
+  margin 300px 0
+  position relative
+  &::after
+    content ''
+    width 900px
+    height 900px
+    border 3px solid #F0F0F0
+    position absolute
+    border-radius 50%
+    top 50%
+    z-index -1
+    transform translateY(-40%)
   &:nth-child(2n-1)
     flex-direction row
     & div

@@ -1,18 +1,11 @@
+const strapiBaseUri = process.env.API_URL || "http://localhost:1337"
+
 export default {
-  /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
   mode: 'universal',
-  /*
-   ** Nuxt target
-   ** See https://nuxtjs.org/api/configuration-target
-   */
   target: 'server',
-  /*
-   ** Headers of the page
-   ** See https://nuxtjs.org/api/configuration-head
-   */
+  env: {
+    strapiBaseUri,
+  },
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -26,54 +19,50 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-  /*
-   ** Customize the progress-bar color
-   */
   loading: '~/components/global/Loader.vue',
-  /*
-   ** Global CSS
-   */
   css: ['~layouts/global.css'],
-  /*
-   ** Plugins to load before mounting the App
-   ** https://nuxtjs.org/guide/plugins
-   */
   plugins: [],
-  /*
-   ** Auto import components
-   ** See https://nuxtjs.org/api/configuration-components
-   */
   components: true,
-  /*
-   ** Nuxt.js dev-modules
-   */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
   ],
-  /*
-   ** Nuxt.js modules
-   */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    // Doc: https://github.com/nuxt/content
-    '@nuxt/content',
+    '@nuxtjs/markdownit',
+    '@nuxtjs/strapi'
   ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
   axios: {},
-  /*
-   ** Content module configuration
-   ** See https://content.nuxtjs.org/configuration
-   */
-  content: {},
+  markdownit: {
+    preset: "default",
+    linkify: true,
+    breaks: true,
+    injected: true,
+    html: true,
+  },
+  strapi: {
+    url: strapiBaseUri,
+    entities: [
+      {
+        name: "projects",
+        type: "collection",
+      },
+      {
+        name: "categories",
+        type: "collection",
+      },
+      {
+        name: "homepage",
+        type: "single",
+      },
+      {
+        name: "global",
+        type: "single",
+      },
+    ],
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
-  // loading: { color: '#000000' },
 }

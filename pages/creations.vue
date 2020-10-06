@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <CreaParallax />
+  <div class="container">
+    <CreaTop />
+    <CreaFilters />
     <CreaList />
   </div>
 </template>
@@ -10,3 +11,8 @@ export default {
   name: 'Creations',
 }
 </script>
+
+<style lang="stylus" scoped>
+.container
+  box-sizing content-box
+</style>
