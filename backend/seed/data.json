@@ -1,0 +1,11 @@
+{
+  "global": {
+    "siteName":"TATCHI Studio",
+    "defaultSeo":{
+      "metaTitle":"Page",
+      "metaDescription":"TATCHI Studio website",
+      "shareImage":null
+    },
+    "favicon":null
+  }
+}
