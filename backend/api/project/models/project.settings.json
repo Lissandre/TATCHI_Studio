@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "projects",
+  "collectionName": "motions",
   "info": {
-    "name": "Project"
+    "name": "Motions"
   },
   "options": {
     "increments": true,

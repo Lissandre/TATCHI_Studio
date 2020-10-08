@@ -10,6 +10,7 @@
     "build": "strapi build",
     "strapi": "strapi",
     "pm2_start": "pm2 start server.js --name strapi_api",
+    "pm2_stop": "pm2 stop strapi_api",
     "pm2_list": "pm2 list",
     "pm2_logs": "pm2 logs strapi_api"
   },
