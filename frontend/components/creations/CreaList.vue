@@ -12,7 +12,7 @@
 export default {
   name: 'CreaList',
   async fetch() {
-    this.projects = await this.$strapi.find('projects')
+    this.projects = await this.$strapi.find('motions')
   },
   data() {
     return {

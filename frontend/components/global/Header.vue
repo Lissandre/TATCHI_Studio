@@ -5,12 +5,12 @@
     </nuxt-link>
     <ul>
       <li>
-        <nuxt-link to="creations">
+        <nuxt-link to="/creations">
           Créations
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="contact">
+        <nuxt-link to="/contact">
           Contact
         </nuxt-link>
       </li>

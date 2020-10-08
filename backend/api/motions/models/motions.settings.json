@@ -11,6 +11,11 @@
   "attributes": {
     "title": {
       "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "project_type": {
+      "type": "string",
       "required": true
     },
     "description": {
@@ -26,7 +31,22 @@
       "required": true
     },
     "md_type": {
-      "type": "string"
+      "type": "string",
+      "required": true
+    },
+    "motion_id": {
+      "type": "biginteger",
+      "required": true
+    },
+    "medias": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.illustrations"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     },
     "cover": {
       "model": "file",
@@ -36,16 +56,6 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": true
-    },
-    "illustrations": {
-      "type": "component",
-      "repeatable": true,
-      "component": "sections.illustrations"
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title",
       "required": true
     }
   }

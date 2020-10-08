@@ -3,7 +3,5 @@
 </template>
 
 <script>
-export default {
-  name: 'Creations-Slug',
-}
+export default {}
 </script>

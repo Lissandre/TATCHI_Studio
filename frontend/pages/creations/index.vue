@@ -7,9 +7,7 @@
 </template>
 
 <script>
-export default {
-  name: 'Creations',
-}
+export default {}
 </script>
 
 <style lang="stylus" scoped>

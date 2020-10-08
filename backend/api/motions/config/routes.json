@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/projects",
-      "handler": "project.find",
+      "path": "/motions",
+      "handler": "motions.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/projects/count",
-      "handler": "project.count",
+      "path": "/motions/count",
+      "handler": "motions.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/projects/:id",
-      "handler": "project.findOne",
+      "path": "/motions/:id",
+      "handler": "motions.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/projects",
-      "handler": "project.create",
+      "path": "/motions",
+      "handler": "motions.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/projects/:id",
-      "handler": "project.update",
+      "path": "/motions/:id",
+      "handler": "motions.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/projects/:id",
-      "handler": "project.delete",
+      "path": "/motions/:id",
+      "handler": "motions.delete",
       "config": {
         "policies": []
       }

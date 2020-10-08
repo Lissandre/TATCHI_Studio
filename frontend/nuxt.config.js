@@ -1,11 +1,11 @@
-const strapiBaseUri = process.env.API_URL || 'https://tatchi-blog.herokuapp.com/'
+const strapiBaseUri = process.env.API_URL || 'http://localhost:1337'
 
 export default {
   mode: 'universal',
   target: 'server',
   server: {
     port: 8000, // par défaut : 3000
-    host: '0.0.0.0' // par défaut : localhost
+    host: '0.0.0.0', // par défaut : localhost
   },
   env: {
     strapiBaseUri,
@@ -44,7 +44,7 @@ export default {
     url: strapiBaseUri,
     entities: [
       {
-        name: 'projects',
+        name: 'motions',
         type: 'collection',
       },
       // {

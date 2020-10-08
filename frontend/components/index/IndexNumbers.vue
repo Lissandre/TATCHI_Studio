@@ -45,7 +45,7 @@ export default {
 .bloc
   display flex
   align-items flex-end
-  justify-content start
+  justify-content flex-start
   margin 300px 0
   position relative
   &::after
