@@ -4,10 +4,9 @@ const fs = require("fs");
 const path = require("path");
 const mime = require("mime-types");
 const {
-  categories,
+  // categories,
   homepage,
-  writers,
-  articles,
+  projects,
   global
 } = require("../../seed/data.json");
 
@@ -94,11 +93,11 @@ async function createEntry({ model, entry, files }) {
   }
 }
 
-async function importCategories() {
-  return Promise.all(categories.map((category) => {
-    return createEntry({ model: "category", entry: category });
-  }));
-}
+// async function importCategories() {
+//   return Promise.all(categories.map((category) => {
+//     return createEntry({ model: "category", entry: category });
+//   }));
+// }
 
 async function importHomepage() {
   const files = {
@@ -107,25 +106,12 @@ async function importHomepage() {
   await createEntry({ model: "homepage", entry: homepage, files });
 }
 
-async function importWriters() {
-  return Promise.all(writers.map(async (writer) => {
+async function importProjects() {
+  return Promise.all(projects.map((project) => {
     const files = {
-      picture: getFileData(`${writer.email}.jpg`),
+      image: getFileData(`${project.slug}.jpg`),
     };
-    return createEntry({
-      model: "writer",
-      entry: writer,
-      files,
-    });
-  }));
-}
-
-async function importArticles() {
-  return Promise.all(articles.map((article) => {
-    const files = {
-      image: getFileData(`${article.slug}.jpg`),
-    };
-    return createEntry({ model: "article", entry: article, files });
+    return createEntry({ model: "project", entry: project, files });
   }));
 }
 
@@ -142,16 +128,14 @@ async function importSeedData() {
   await setPublicPermissions({
     global: ['find'],
     homepage: ['find'],
-    article: ['find', 'findone'],
-    category: ['find', 'findone'],
-    writer: ['find', 'findone'],
+    project: ['find', 'findone'],
+    // category: ['find', 'findone'],
   });
 
   // Create all entries
-  await importCategories();
+  // await importCategories();
   await importHomepage();
-  await importWriters();
-  await importArticles();
+  await importProjects();
   await importGlobal();
 }
 

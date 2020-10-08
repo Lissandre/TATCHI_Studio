@@ -1,23 +1,23 @@
 <template>
   <div class="creations" :class="!mod3 ? 'flexBreak' : ''">
-    <div class="creation"></div>
-    <div class="creation"></div>
-    <div class="creation"></div>
-    <div class="creation"></div>
-    <div class="creation"></div>
-    <div class="creation"></div>
-    <div class="creation"></div>
-    <div class="creation"></div>
-    <div class="creation"></div>
+    <CreaListItem
+      v-for="project in projects"
+      :key="project.id"
+      :project="project"
+    />
   </div>
 </template>
 
 <script>
 export default {
   name: 'CreaList',
+  async fetch() {
+    this.projects = await this.$strapi.find('projects')
+  },
   data() {
     return {
       mod3: true,
+      projects: [],
     }
   },
 }
@@ -33,14 +33,4 @@ export default {
     content ''
     flex auto
     max-width 364px
-
-.creation
-  margin 8px 0
-  width 364px
-  height 364px
-  background #f0f0f0
-  &:nth-child(3n)
-    transform translateY(50%)
-  &:nth-child(3n+1)
-    transform translateY(30%)
 </style>

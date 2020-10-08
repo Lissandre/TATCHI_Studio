@@ -1,60 +1,60 @@
-import { getStrapiMedia } from "./medias";
+import { getStrapiMedia } from './medias'
 
 export function getMetaTags(seo) {
-  const tags = [];
+  const tags = []
 
   if (seo.metaTitle) {
     tags.push(
       {
-        property: "og:title",
+        property: 'og:title',
         content: seo.metaTitle,
       },
       {
-        name: "twitter:title",
+        name: 'twitter:title',
         content: seo.metaTitle,
       }
-    );
+    )
   }
   if (seo.metaDescription) {
     tags.push(
       {
-        name: "description",
+        name: 'description',
         content: seo.metaDescription,
       },
       {
-        property: "og:description",
+        property: 'og:description',
         content: seo.metaDescription,
       },
       {
-        name: "twitter:description",
+        name: 'twitter:description',
         content: seo.metaDescription,
       }
-    );
+    )
   }
   if (seo.shareImage) {
-    const imageUrl = getStrapiMedia(seo.shareImage.url);
+    const imageUrl = getStrapiMedia(seo.shareImage.url)
     tags.push(
       {
-        name: "image",
+        name: 'image',
         content: imageUrl,
       },
       {
-        property: "og:image",
+        property: 'og:image',
         content: imageUrl,
       },
       {
-        name: "twitter:image",
+        name: 'twitter:image',
         content: imageUrl,
       }
-    );
+    )
   }
-  if (seo.article) {
+  if (seo.project) {
     tags.push({
-      property: "og:type",
-      content: "article",
-    });
+      property: 'og:type',
+      content: 'project',
+    })
   }
-  tags.push({ name: "twitter:card", content: "summary_large_image" });
+  tags.push({ name: 'twitter:card', content: 'summary_large_image' })
 
-  return tags;
+  return tags
 }
