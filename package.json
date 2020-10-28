@@ -19,6 +19,7 @@
     "lottie-web": "^5.7.3",
     "moment": "^2.29.0",
     "nuxt": "^2.14.0",
+    "nuxt-start": "^2.14.7",
     "prevent-scroll": "^2.0.0",
     "uikit": "^3.2.3",
     "vue-lottie-player": "^0.1.9",
