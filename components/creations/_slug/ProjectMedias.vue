@@ -28,10 +28,7 @@
         </div>
       </div>
     </div>
-    <div v-if="isOpen" class="modale">
-      <div class="cross"></div>
-      <ProjectMediasModale :url-modale="urlModale" :media-list="mediaList" />
-    </div>
+    <ProjectMediasModale :url-modale="urlModale" :media-list="mediaList" />
   </div>
 </template>
 
@@ -49,7 +46,7 @@ export default {
   data() {
     return {
       mediaList: [],
-      isOpen: false,
+      urlModale: '',
     }
   },
   mounted() {
@@ -74,8 +71,8 @@ export default {
   methods: {
     getStrapiMedia,
     modale(url) {
-      this.urlModale = url
-      this.isOpen = true
+      this.urlModale = ''
+      this.urlModale = this.getStrapiMedia(url)
     },
   },
 }

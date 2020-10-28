@@ -1,7 +1,7 @@
 <template>
   <div>
     <ProjectTopInfo :project="project" />
-    <ProjectPlayer :motionId="project.motion_id" />
+    <ProjectPlayer :motion-id="project.motion_id" />
     <ProjectMedias :medias="project.medias" />
   </div>
 </template>
