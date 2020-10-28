@@ -1,7 +1,17 @@
 <template>
-  <div></div>
+  <div>
+    <ProjectTopInfo :project="project" />
+    <ProjectPlayer :motionId="project.motion_id" />
+    <ProjectMedias :medias="project.medias" />
+  </div>
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $strapi, params }) {
+    return {
+      project: await $strapi.findOne('motions', params.slug),
+    }
+  },
+}
 </script>

@@ -3,7 +3,6 @@
     <h2>Un nouveau chapitre commence ici.</h2>
     <div class="centerContainer">
       <div class="video">
-        <div class="trickVideo"></div>
         <client-only>
           <vueVimeoPlayer
             ref="player"

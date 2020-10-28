@@ -1,15 +1,15 @@
 <template>
   <nuxt-link
-    :key="project.id"
-    :to="{ name: 'creations-slug', params: { slug: project.slug } }"
+    :key="motion.id"
+    :to="{ name: 'creations-slug', params: { slug: motion.slug } }"
     class="creation"
     :style="`background-image: url(${getStrapiMedia(
-      project.cover.formats.medium.url
+      motion.cover.formats.medium.url
     )})`"
   >
     <div class="title">
       <h4>
-        {{ project.title }}
+        {{ motion.title }}
       </h4>
     </div>
   </nuxt-link>
@@ -21,8 +21,8 @@ import { getStrapiMedia } from '@/utils/medias'
 export default {
   name: 'CreaListItem',
   props: {
-    project: {
-      type: Object,
+    motion: {
+      type: Array,
       default: () => ({}),
     },
   },

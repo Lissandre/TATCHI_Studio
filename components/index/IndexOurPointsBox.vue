@@ -6,13 +6,14 @@
       <a href="#">Lorem</a>
     </div>
     <div :class="'animation ' + slug">
+      <img :src="setImage" alt="" />
       <!-- {{ animation }} -->
     </div>
   </div>
 </template>
 
 <script>
-import lottie from 'lottie-web'
+// import lottie from 'lottie-web'
 export default {
   name: 'IndexOurPointsBox',
   props: {
@@ -33,20 +34,25 @@ export default {
       default: null,
     },
   },
-  // eslint-disable-next-line
-  mounted: function() {
-    lottie.loadAnimation({
-      container: document.querySelector('.animation.' + this.slug), // the dom element that will contain the animation
-      renderer: 'svg',
-      loop: false,
-      autoplay: true,
-      animationData: require('@/assets/svg_anim/' + this.slug + 'Anim.json'), // the path to the animation json
-      rendererSettings: {
-        preserveAspectRatio:
-          this.side === 'left' ? 'xMinYMid meet' : 'xMaxYMid meet',
-      },
-    })
+  computed: {
+    setImage() {
+      return require(`@/assets/images/${this.slug}.png`)
+    },
   },
+  // eslint-disable-next-line
+  // mounted: function() {
+  //   lottie.loadAnimation({
+  //     container: document.querySelector('.animation.' + this.slug), // the dom element that will contain the animation
+  //     renderer: 'svg',
+  //     loop: false,
+  //     autoplay: true,
+  //     animationData: require('@/assets/svg_anim/' + this.slug + 'Anim.json'), // the path to the animation json
+  //     rendererSettings: {
+  //       preserveAspectRatio:
+  //         this.side === 'left' ? 'xMinYMid meet' : 'xMaxYMid meet',
+  //     },
+  //   })
+  // },
 }
 </script>
 
@@ -76,12 +82,17 @@ export default {
     overflow hidden
     opacity 0.5
     margin 0 30px
-    & svg
-      transform scale(1.5) !important
-      will-change transform
-    &.memorable svg
-      transform scale(3) !important
-      will-change transform
+    display flex
+    justify-content center
+    align-items center
+    & img
+      width 100px
+    // & svg
+    //   transform scale(1.5) !important
+    //   will-change transform
+    // &.memorable svg
+    //   transform scale(3) !important
+    //   will-change transform
   &.right
     flex-direction row-reverse
   &.left

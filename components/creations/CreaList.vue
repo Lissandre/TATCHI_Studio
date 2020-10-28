@@ -1,10 +1,6 @@
 <template>
   <div class="creations" :class="!mod3 ? 'flexBreak' : ''">
-    <CreaListItem
-      v-for="project in projects"
-      :key="project.id"
-      :project="project"
-    />
+    <CreaListItem v-for="motion in motions" :key="motion.id" :motion="motion" />
   </div>
 </template>
 
@@ -12,12 +8,12 @@
 export default {
   name: 'CreaList',
   async fetch() {
-    this.projects = await this.$strapi.find('motions')
+    this.motions = await this.$strapi.find('motions')
   },
   data() {
     return {
       mod3: true,
-      projects: [],
+      motions: [],
     }
   },
 }

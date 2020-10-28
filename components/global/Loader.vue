@@ -98,11 +98,11 @@ export default {
       setTimeout(() => {
         this.animIn = false
         this.animOut = true
-      }, 800)
+      }, 700)
       setTimeout(() => {
         this.loading = false
         this.animOut = false
-      }, 1600)
+      }, 1500)
     },
   },
 }

@@ -24,7 +24,7 @@ export default {}
 
 <style lang="stylus">
 #nav
-  z-index 999999
+  z-index 9999
   display flex
   justify-content space-between
   padding 2% 10%
