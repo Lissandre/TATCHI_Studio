@@ -13,7 +13,7 @@ export default {
   data() {
     return {
       mod3: true,
-      motions: [],
+      motions: {},
     }
   },
 }

@@ -22,7 +22,7 @@ export default {
   name: 'CreaListItem',
   props: {
     motion: {
-      type: Array,
+      type: Object,
       default: () => ({}),
     },
   },

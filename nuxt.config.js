@@ -1,4 +1,4 @@
-const strapiBaseUri = process.env.API_URL || 'http://localhost:1337'
+const strapiBaseUri = process.env.API_URL || 'https://back.tatchi.fr'
 
 export default {
   mode: 'universal',
@@ -41,7 +41,7 @@ export default {
     html: true,
   },
   strapi: {
-    url: strapiBaseUri,
+    url: 'https://back.tatchi.fr',
     entities: [
       {
         name: 'motions',

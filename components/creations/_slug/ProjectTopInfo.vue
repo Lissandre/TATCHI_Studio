@@ -2,10 +2,12 @@
   <div>
     <h1>{{ project.title }}</h1>
     <h3>Type de projet / {{ project.project_type }}</h3>
+    <!-- eslint-disable -->
     <div
       class="projectDescription"
       v-html="$md.render(project.description)"
     ></div>
+    <!-- eslint-enable -->
     <div class="infos">
       <div class="info">
         <span>Équipe</span>

@@ -29,9 +29,9 @@ export default {
       }
     },
   },
-  mounted() {
-    console.log(this.urlModale)
-  },
+  // mounted() {
+  //   console.log(this.urlModale)
+  // },
 }
 </script>
 
