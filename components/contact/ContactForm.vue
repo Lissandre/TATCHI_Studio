@@ -17,10 +17,25 @@
         rows="10"
         placeholder="Message"
       ></textarea>
-      <input type="submit" value="Envoyer" />
+      <input type="button" value="Envoyer" @click="sendMail()" />
     </form>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    sendMail() {
+      this.$axios.post('/mail/send', {
+        from: 'John Doe',
+        subject: 'Incredible',
+        text: 'This is an incredible test message',
+        to: 'lissandre.pasdeloup@gmail.com',
+      })
+    },
+  },
+}
+</script>
 
 <style lang="stylus" scoped>
 .contactForm

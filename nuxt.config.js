@@ -31,7 +31,12 @@ export default {
   plugins: [],
   components: true,
   buildModules: ['@nuxtjs/eslint-module'],
-  modules: ['@nuxtjs/axios', '@nuxtjs/markdownit', '@nuxtjs/strapi'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/markdownit',
+    '@nuxtjs/strapi',
+    'nuxt-mail',
+  ],
   axios: {},
   markdownit: {
     preset: 'default',
@@ -39,6 +44,12 @@ export default {
     breaks: true,
     injected: true,
     html: true,
+  },
+  mail: {
+    smtp: {
+      host: 'smtp.tatchi.fr',
+      port: 587,
+    },
   },
   strapi: {
     url: 'https://back.tatchi.fr',

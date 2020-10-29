@@ -11,7 +11,7 @@
     "lint": "npm run lint:js -- --fix"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.0",
+    "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/strapi": "^0.1.6",
     "animated-scroll-to": "^2.0.10",
@@ -19,6 +19,7 @@
     "lottie-web": "^5.7.3",
     "moment": "^2.29.0",
     "nuxt": "^2.14.0",
+    "nuxt-mail": "^1.0.1",
     "nuxt-start": "^2.14.7",
     "prevent-scroll": "^2.0.0",
     "uikit": "^3.2.3",
