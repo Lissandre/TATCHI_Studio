@@ -2,35 +2,47 @@
   <div class="contactForm">
     <form action="">
       <div>
-        <input id="" type="text" name="" placeholder="Nom" />
-        <input id="" type="text" name="" placeholder="Prénom" />
-        <input id="" type="email" name="" placeholder="Mail" />
+        <input id="" ref="lastname" type="text" name="" placeholder="Nom" />
+        <input id="" ref="firstname" type="text" name="" placeholder="Prénom" />
+        <input id="" ref="mail" type="email" name="" placeholder="Mail" />
       </div>
       <div>
-        <input id="" type="text" name="" placeholder="Nom de l'entreprise" />
-        <input id="" type="tel" name="" placeholder="Tél" />
+        <input
+          id=""
+          ref="company"
+          type="text"
+          name=""
+          placeholder="Nom de l'entreprise"
+        />
+        <input id="" ref="phone" type="tel" name="" placeholder="Tél" />
       </div>
       <textarea
         id=""
+        ref="text"
         name=""
         cols="30"
         rows="10"
         placeholder="Message"
       ></textarea>
-      <input type="button" value="Envoyer" @click="sendMail()" />
+      <input type="submit" value="Envoyer" @click="sendMail()" />
     </form>
   </div>
 </template>
 
 <script>
+// import axios from 'axios'
+
 export default {
   methods: {
     sendMail() {
-      this.$axios.post('/mail/send', {
-        from: 'John Doe',
-        subject: 'Incredible',
-        text: 'This is an incredible test message',
-        to: 'lissandre.pasdeloup@gmail.com',
+      this.data = JSON.stringify({
+        from: `${this.$refs.firstname.value} ${this.$refs.lastname.value} <${this.$refs.mail.value}>`,
+        subject: 'Contact TATCHI Studio',
+        text: `${this.$refs.text.value} \n \n \n${this.$refs.firstname.value} ${this.$refs.lastname.value} \n${this.$refs.mail.value} \n${this.$refs.phone.value} \n${this.$refs.company.value}`,
+        to: 'contact@tatchi.fr',
+      })
+      this.$axios.$post('/mail/send', this.data, {
+        headers: { 'Content-Type': 'application/json' },
       })
     },
   },

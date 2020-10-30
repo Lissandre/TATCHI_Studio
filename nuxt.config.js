@@ -37,7 +37,19 @@ export default {
     '@nuxtjs/strapi',
     'nuxt-mail',
   ],
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL || 'http://192.168.0.15:8000/', // Used as fallback if no runtime config is provided
+  },
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BASE_URL || 'http://192.168.0.15:8000/',
+    },
+  },
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL || 'http://192.168.0.15:8000/',
+    },
+  },
   markdownit: {
     preset: 'default',
     linkify: true,
@@ -47,8 +59,17 @@ export default {
   },
   mail: {
     smtp: {
-      host: 'smtp.tatchi.fr',
-      port: 587,
+      host: 'ssl0.ovh.net',
+      port: 465,
+      secure: true,
+      secureConnection: true,
+      auth: {
+        user: process.env.CONTACT_USER, // compte expéditeur
+        pass: process.env.CONTACT_PASS, // mot de passe du compte expéditeur
+      },
+      tls: {
+        ciphers: 'SSLv3',
+      },
     },
   },
   strapi: {
