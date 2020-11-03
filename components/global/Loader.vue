@@ -109,6 +109,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+div
+  width 100%
+  display flex
+  justify-content center
+  align-items center
 svg
   width 80%
 </style>
