@@ -85,19 +85,16 @@ export default {
 
 <style lang="stylus" scoped>
 .creaTop
-  position relative
-  overflow-x hidden
-
-h1
-  text-transform uppercase
-  color #D0D0D0
-  font-size 90px
-  font-weight bold
-  position absolute
-  top 50%
-  left 50%
-  transform translate(-50%, -50%)
-  z-index 2
+  & h1
+    text-transform uppercase
+    color #D0D0D0
+    font-size 90px
+    font-weight bold
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    z-index 2
 
 .parallax
   height 80vh
@@ -150,4 +147,7 @@ h1
     top 20%
   h1
     font-size 50px
+  .creaTop
+    position relative
+    overflow-x hidden
 </style>

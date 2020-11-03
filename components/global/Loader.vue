@@ -27,7 +27,7 @@
         >
           <style type="text/css">
             .st0 {
-              fill: #191919;
+              fill: #232323;
             }
             .st1 {
               font-family: 'NexaLight';
