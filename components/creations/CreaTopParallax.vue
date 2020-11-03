@@ -84,7 +84,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.creaTop h1
+.creaTop
+  position relative
+  overflow-x hidden
+
+h1
   text-transform uppercase
   color #D0D0D0
   font-size 90px
@@ -131,4 +135,19 @@ export default {
       top 20%
       left 15%
       z-index 2
+
+@media (max-width: 768px)
+  .spheres
+    & .sphere:first-child
+      top 50%
+      left 35%
+    & .sphere:last-child
+      top 70%
+      left 10%
+  .parallax img
+    height 60%
+    position absolute
+    top 20%
+  h1
+    font-size 50px
 </style>
