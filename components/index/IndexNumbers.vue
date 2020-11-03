@@ -26,7 +26,10 @@
       <div>
         <p>59<span>%</span></p>
       </div>
-      <p>des cadres préfèrent découvrir</p>
+      <p>
+        des cadres préférent découvrir les services d'une société au travers
+        d'une vidéo
+      </p>
     </div>
   </div>
 </template>
@@ -37,7 +40,6 @@ export default {
   data() {
     return {}
   },
-  methods: {},
 }
 </script>
 
@@ -96,4 +98,30 @@ export default {
     transform translateY(36%)
     line-height 1
     vertical-align sub
+
+@media (max-width: 1024px)
+  .bloc
+    margin 70px 0
+    &::after
+      display none
+    &:nth-child(2n-1) div
+      margin-right 20px
+      width 100px
+    &:nth-child(2n)
+      flex-direction row
+      & div
+        width 100px
+        margin-left 0
+        margin-right 20px
+      & p
+        text-align left
+    & div p
+      font-size 70px
+      letter-spacing -4px
+      text-shadow 0px 0px 20px #d2d2d2
+      & span
+        font-size 20px
+    & p
+      font-size 16px
+      width 100%
 </style>

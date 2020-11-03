@@ -1,19 +1,25 @@
 <template>
   <div class="container">
-    <div class="slider">
-      <div class="leftArrow" @click="changeReview(-1)"></div>
-      <div class="review">
-        <h5>
-          <span>
-            {{ review.name[count - 1] }}
-          </span>
-          « {{ review.shortDesc[count - 1] }} »
-        </h5>
-        <p>
-          {{ review.text[count - 1] }}
-        </p>
+    <div class="box">
+      <div class="arrowContainer" @click="changeReview(-1)">
+        <div class="leftArrow"></div>
       </div>
-      <div class="rightArrow" @click="changeReview(+1)"></div>
+      <div class="slider">
+        <div class="review">
+          <h5>
+            <span>
+              {{ review.name[count - 1] }}
+            </span>
+            « {{ review.shortDesc[count - 1] }} »
+          </h5>
+          <p>
+            {{ review.text[count - 1] }}
+          </p>
+        </div>
+      </div>
+      <div class="arrowContainer" @click="changeReview(+1)">
+        <div class="rightArrow"></div>
+      </div>
     </div>
     <p class="count">{{ count }} <span>/</span> {{ total }}</p>
   </div>
@@ -27,14 +33,14 @@ export default {
       count: 1,
       total: 2,
       review: {
-        name: ['Aimé Césaire', 'Le Dev'],
+        name: ['Jean Marc Zerad', 'Stéphane Goncalves'],
         shortDesc: [
-          'Projet patati fait le patata',
-          'Au moins, il y a un rendu',
+          'CEO chez MZ Technologie',
+          "Responsable d'exploitation chez NPP",
         ],
         text: [
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.',
-          "Vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd'hui avec vous, je dirais que c'est d'abord des rencontres.",
+          "Tatchi a répondu au pied levé à notre demande. Ils ont restitué à l'image la vision que j'avais pour mon projet.",
+          "L'équipe a reussi à mettre en valeur mon idée de départ sans dénaturer notre marque de fabrique. Je suis fier d'avoir une animation d'une telle qualité pour présenter notre activité.",
         ],
       },
     }
@@ -56,12 +62,20 @@ export default {
   display flex
   flex-direction column
   align-items center
+.box
+  display flex
+  align-items stretch
+  justify-content space-between
   & .slider
+    display flex
+    flex-direction column
+    align-items center
     width 1000px
     display flex
     align-items center
     justify-content space-between
     margin-bottom 67px
+    height auto
     & .review
       text-align center
       & h5
@@ -78,6 +92,10 @@ export default {
         width 846px
         letter-spacing 0.3px
         line-height 30px
+
+.arrowContainer
+  display flex
+  align-items center
 
 .rightArrow
   width 0
@@ -101,4 +119,14 @@ export default {
     color #f0f0f0
     font-size 18px
     font-weight bolder
+
+@media (max-width: 1024px)
+  .container .slider
+    width 90%
+    & .review
+      & p
+        width 90%
+        margin 0 auto
+      & h5 span
+        display block
 </style>

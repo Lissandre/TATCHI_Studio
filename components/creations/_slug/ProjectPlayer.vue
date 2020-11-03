@@ -41,6 +41,10 @@ export default {
       return this.motionId
     },
   },
+  mounted() {
+    this.width = document.querySelector('.content').offsetWidth
+    this.height = this.width / (16 / 9)
+  },
   methods: {
     onReady() {
       this.playerReady = true

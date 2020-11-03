@@ -36,6 +36,10 @@ export default {
   created() {
     this.$root.$refs.play = this
   },
+  mounted() {
+    this.width = document.querySelector('.content').offsetWidth
+    this.height = this.width / (16 / 9)
+  },
   methods: {
     onReady() {
       this.playerReady = true
@@ -58,15 +62,5 @@ export default {
   justify-content center
   margin-bottom 150px
 .video
-  background #fafafa
-  height 630px
-  width 1124px
   position relative
-.trickVideo
-  position absolute
-  top 0
-  left 0
-  height 100%
-  width 100%
-  pointer-events none
 </style>

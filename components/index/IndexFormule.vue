@@ -98,4 +98,18 @@ export default {
   transform translateY(-65%)
   border-radius 50%
   z-index -1
+
+@media (max-width: 1024px)
+  .formule
+    padding-top 50px
+    margin-bottom 300px
+
+  .formulePoints .middle
+    justify-content center
+    flex-direction column
+    margin 0
+    & .formulePoint:first-child
+      margin 8% 0 8% 0
+    & .formulePoint:last-child
+      margin 0 0 8% 0
 </style>

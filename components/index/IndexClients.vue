@@ -18,4 +18,11 @@ div
   display flex
   justify-content space-between
   margin-bottom 16%
+
+@media (max-width: 1024px)
+  div
+    flex-wrap wrap
+    justify-content space-around
+  img
+    margin 12px
 </style>

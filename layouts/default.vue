@@ -1,7 +1,7 @@
 <template>
   <div id="defaultLayout">
     <Header />
-    <Nuxt class="content" />
+    <Nuxt ref="content" class="content" />
     <BackTop />
     <Footer />
   </div>
@@ -35,10 +35,10 @@ a
   height 100vh
   width 100%
   & .content
-    // padding 0 16%
-    width 1124px
     margin 0 auto
     min-height 95vh
+    box-sizing border-box
+    overflow-x hidden
 
 ::selection
   color #fff
@@ -49,4 +49,32 @@ a
   color #fff
   background #000
   outline-color #000
+
+@media (min-width: 1281px)
+  .content
+    width 1124px
+
+@media (min-width: 1025px) and (max-width: 1280px)
+  .content
+    width 100%
+
+@media (min-width: 768px) and (max-width: 1024px)
+  .content
+    width 100%
+    padding 0 20px
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
+  .content
+    width 768px
+    padding 0 20px
+
+@media (min-width: 481px) and (max-width: 767px)
+  .content
+    width 100%
+    padding 0 20px
+
+@media (min-width: 320px) and (max-width: 480px)
+  .content
+    width 100%
+    padding 0 20px
 </style>

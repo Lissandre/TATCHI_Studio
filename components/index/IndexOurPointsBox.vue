@@ -97,4 +97,17 @@ export default {
     flex-direction row-reverse
   &.left
     flex-direction row
+
+@media (max-width: 1024px)
+  .escComponent
+    & div:first-child
+      width 100%
+      & p
+        width auto
+    & .animation
+      justify-content flex-end
+      & img
+        width 80px
+    &.right
+      flex-direction row
 </style>

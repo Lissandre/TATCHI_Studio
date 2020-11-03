@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>
-      Si une image vaut mille mots, un motion <br />
+      Si une image vaut mille mots, un motion <br class="desktop" />
       en vaut … surement beaucoup plus !
     </h2>
     <div class="ourPoints">
@@ -41,7 +41,6 @@ export default {
 
 <style lang="stylus" scoped>
 .ourPoints
-  // background-image url(../assets/images/bgEsc.png)
   background-size contain
   background-repeat no-repeat
   background-position 40% center

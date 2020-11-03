@@ -20,4 +20,10 @@ h2
   font-weight 300
   margin-bottom 100px
   color #575757
+@media (max-width: 1024px)
+  h2
+    font-size 42px
+    margin-bottom 60px
+  .desktop
+    display none
 </style>

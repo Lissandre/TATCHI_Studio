@@ -82,4 +82,15 @@ button
     transform scale(0.96)
 img
   height 54px
+
+@media (max-width: 768px)
+  h1
+    font-size 50px
+  p
+    font-size 20px
+    margin-bottom 20px
+    &.sub
+      margin-bottom 30px
+  button
+    margin-top 50px
 </style>

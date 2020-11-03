@@ -59,22 +59,36 @@ export default {
 .bgTopHome
   z-index -1
   pointer-events none
-  & .spheres
-    background-color #f0f0f0
-    border-radius 50%
-    box-shadow -1px -3px 8px inset #ffffff, 20px 10px 30px inset rgba(255,255,255,0.6), -15px -40px 80px inset rgba(0,0,0,0.3)
-    transition 0.3s transform ease-out
-    will-change transform
+  position absolute
+  width 100%
+  height 100%
+  overflow-x hidden
+  top 0
+  left 0
+
+.spheres
+  background-color #f0f0f0
+  border-radius 50%
+  box-shadow -1px -3px 8px inset #ffffff, 20px 10px 30px inset rgba(255,255,255,0.6), -15px -40px 80px inset rgba(0,0,0,0.3)
+  transition 0.3s transform ease-out
+  will-change transform
+  &:first-child
+    height 200px
+    width 200px
+    position absolute
+    top 20vh
+    left 35%
+  &:last-child
+    height 400px
+    width 400px
+    position absolute
+    top 30vh
+    left 41%
+
+@media (max-width: 768px)
+  .spheres
     &:first-child
-      height 200px
-      width 200px
-      position absolute
-      top 20vh
-      left 35%
+      left 17%
     &:last-child
-      height 400px
-      width 400px
-      position absolute
-      top 30vh
-      left 41%
+      left 20%
 </style>
