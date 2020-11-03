@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .bgTopHome
   z-index -1
   pointer-events none
