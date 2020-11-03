@@ -107,3 +107,8 @@ export default {
   },
 }
 </script>
+
+<style lang="stylus" scoped>
+svg
+  width 80%
+</style>
