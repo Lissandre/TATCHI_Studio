@@ -90,4 +90,19 @@ input[type=submit]
   cursor pointer
   font-weight bold
   outline-color #000000
+
+@media (max-width: 1024px)
+  .contactForm
+    margin-top 40px
+  form
+    width 100%
+    & div
+      margin 0
+      display flex
+      flex-direction column
+  input
+    width 100%
+    margin-bottom 20px
+  input[type=submit]
+    width 100%
 </style>

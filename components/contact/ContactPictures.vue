@@ -22,4 +22,14 @@
       width 39%
     & img
       width 100%
+
+@media (max-width: 1024px)
+  .agencyPictures
+    margin-top 200px
+    flex-direction column
+    & div
+      &:first-child
+        width 100%
+      &:last-child
+        width 100%
 </style>

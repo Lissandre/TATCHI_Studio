@@ -14,4 +14,8 @@
 span
   color #575757
   text-transform uppercase
+
+@media (max-width: 1024px)
+  .introductionText
+    font-size 36px
 </style>

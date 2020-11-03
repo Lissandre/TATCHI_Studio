@@ -38,4 +38,12 @@ p
     line-height 40px
     font-size 20px
     width 80%
+
+@media (max-width: 1024px)
+  .contactTexts
+    margin-top 200px
+    & div
+      flex-direction column
+  p:last-child
+    width 100%
 </style>
