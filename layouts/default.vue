@@ -32,11 +32,11 @@ a
   margin 0
 
 #defaultLayout
-  height 100vh
+  min-height 100vh
   width 100%
   & .content
     margin 0 auto
-    min-height 95vh
+    min-height 85vh
     box-sizing border-box
     overflow-x hidden
 
@@ -57,6 +57,7 @@ a
 @media (min-width: 1025px) and (max-width: 1280px)
   .content
     width 100%
+    padding 0 20px
 
 @media (min-width: 768px) and (max-width: 1024px)
   .content
@@ -65,7 +66,7 @@ a
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
   .content
-    width 768px
+    width 100%
     padding 0 20px
 
 @media (min-width: 481px) and (max-width: 767px)
