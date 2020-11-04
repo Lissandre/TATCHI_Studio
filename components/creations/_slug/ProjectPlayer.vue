@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="video">
       <client-only>
         <vueVimeoPlayer
@@ -58,3 +58,12 @@ export default {
   },
 }
 </script>
+
+<style lang="stylus" scoped>
+.container
+  display flex
+  justify-content center
+  margin-bottom 150px
+.video
+  position relative
+</style>

@@ -145,9 +145,9 @@ export default {
     height 60%
     position absolute
     top 20%
-  h1
-    font-size 50px
   .creaTop
     position relative
-    overflow-x hidden
+    & h1
+      transform translate(-50%, -100%)
+      font-size 50px
 </style>

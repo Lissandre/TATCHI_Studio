@@ -8,9 +8,12 @@
 
 <script>
 export default {
-  async asyncData({ $strapi, params }) {
+  async asyncData({ $strapi, params, error, redirect }) {
+    const project = await $strapi.findOne('motions', params.slug).catch(() => {
+      error({ statusCode: 404, message: 'Not found' })
+    })
     return {
-      project: await $strapi.findOne('motions', params.slug),
+      project,
     }
   },
 }

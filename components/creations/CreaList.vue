@@ -1,5 +1,5 @@
 <template>
-  <div class="creations" :class="!mod3 ? 'flexBreak' : ''">
+  <div class="creations" :class="motions.length % 3 === 0 ? '' : 'flexBreak'">
     <CreaListItem v-for="motion in motions" :key="motion.id" :motion="motion" />
   </div>
 </template>
@@ -12,7 +12,6 @@ export default {
   },
   data() {
     return {
-      mod3: true,
       motions: {},
     }
   },
@@ -29,4 +28,13 @@ export default {
     content ''
     flex auto
     max-width 364px
+
+@media (max-width: 1024px)
+  .creations
+    margin-top 0px
+    margin-bottom 150px
+
+@media (max-width: 768px)
+  .creations
+    margin-top 100px
 </style>

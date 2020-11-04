@@ -1,6 +1,7 @@
 <template>
   <nuxt-link
     :key="motion.id"
+    ref="creation"
     :to="{ name: 'creations-slug', params: { slug: motion.slug } }"
     class="creation"
     :style="`background-image: url(${getStrapiMedia(
@@ -26,6 +27,16 @@ export default {
       default: () => ({}),
     },
   },
+  mounted() {
+    document.querySelector('.creation').style.height = `${
+      document.querySelector('.creation').offsetWidth
+    }px`
+    window.addEventListener('resize', () => {
+      document.querySelector('.creation').style.height = `${
+        document.querySelector('.creation').offsetWidth
+      }px`
+    })
+  },
   methods: {
     getStrapiMedia,
   },
@@ -36,7 +47,6 @@ export default {
 .creation
   margin 8px 0
   width 364px
-  height 364px
   background-size cover
   background-position center center
   overflow hidden
@@ -59,4 +69,16 @@ export default {
       color #000
   &:hover .title
     opacity 1
+
+@media (max-width: 1024px)
+  .creation
+    width 32%
+
+@media (max-width: 768px)
+  .creation
+    width 100%
+    &:nth-child(3n)
+      transform translateY(0%)
+    &:nth-child(3n+1)
+      transform translateY(0%)
 </style>
