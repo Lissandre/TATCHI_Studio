@@ -84,4 +84,15 @@ h3
         color #575757
       &:last-child
         color #808080
+
+@media (max-width: 1024px)
+  h1
+    font-size 36px
+
+  .infos
+    display flex
+    flex-direction column
+    margin-bottom 200px
+    .info
+      margin-bottom 12px
 </style>

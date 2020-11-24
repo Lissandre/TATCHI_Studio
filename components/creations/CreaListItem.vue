@@ -5,7 +5,7 @@
     :to="{ name: 'creations-slug', params: { slug: motion.slug } }"
     class="creation"
     :style="`background-image: url(${getStrapiMedia(
-      motion.cover.formats.medium.url
+      motion.cover.formats.thumbnail.url
     )})`"
   >
     <div class="title">
@@ -28,13 +28,14 @@ export default {
     },
   },
   mounted() {
-    document.querySelector('.creation').style.height = `${
-      document.querySelector('.creation').offsetWidth
-    }px`
+    const projects = document.querySelectorAll('.creation')
+    projects.forEach((project) => {
+      project.style.height = `${project.offsetWidth}px`
+    })
     window.addEventListener('resize', () => {
-      document.querySelector('.creation').style.height = `${
-        document.querySelector('.creation').offsetWidth
-      }px`
+      projects.forEach((project) => {
+        project.style.height = `${project.offsetWidth}px`
+      })
     })
   },
   methods: {
@@ -67,6 +68,7 @@ export default {
     & h4
       font-size 24px
       color #000
+      text-align center
   &:hover .title
     opacity 1
 

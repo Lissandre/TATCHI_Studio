@@ -38,16 +38,17 @@ export default {
     'nuxt-mail',
   ],
   axios: {
-    baseURL: process.env.BASE_URL || 'http://192.168.0.15:8000/', // Used as fallback if no runtime config is provided
+    baseURL: process.env.BASE_URL || 'http://prodstudio.tatchi.fr:8000/', // Used as fallback if no runtime config is provided
   },
   publicRuntimeConfig: {
     axios: {
-      browserBaseURL: process.env.BASE_URL || 'http://192.168.0.15:8000/',
+      browserBaseURL:
+        process.env.BASE_URL || 'http://prodstudio.tatchi.fr:8000/',
     },
   },
   privateRuntimeConfig: {
     axios: {
-      baseURL: process.env.BASE_URL || 'http://192.168.0.15:8000/',
+      baseURL: process.env.BASE_URL || 'http://prodstudio.tatchi.fr:8000/',
     },
   },
   markdownit: {
