@@ -117,7 +117,7 @@ export default {
   & .sphere
     background-color #f0f0f0
     border-radius 50%
-    box-shadow -1px -3px 8px inset #ffffff, 10px 5px 20px inset rgba(255,255,255,0.6), -10px -20px 25px inset rgba(0,0,0,0.2)
+    box-shadow -1px -3px 8px #ffffff inset, 10px 5px 20px rgba(255,255,255,0.6) inset, -10px -20px 25px rgba(0,0,0,0.2) inset
     transition 0.3s transform ease-out
     will-change transform
     &:first-child
