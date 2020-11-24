@@ -17,14 +17,14 @@
       <ul>
         <li>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/tatchi-agence/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src="@/assets/images/logos/linkedin.svg" alt="" />
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a
             href="https://instagram.com"
             target="_blank"
@@ -32,7 +32,7 @@
           >
             <img src="@/assets/images/logos/instagram.svg" alt="" />
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </footer>
