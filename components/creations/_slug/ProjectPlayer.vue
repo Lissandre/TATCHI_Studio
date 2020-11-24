@@ -7,6 +7,7 @@
           :video-id="getMotionId"
           :player-height="height"
           :player-width="width"
+          :options="options"
           @ready="onReady"
         />
       </client-only>
@@ -32,7 +33,12 @@ export default {
     return {
       height: 630,
       width: 1124,
-      options: {},
+      options: {
+        color: 'ffffff',
+        byline: false,
+        title: false,
+        portrait: false,
+      },
       playerReady: false,
     }
   },

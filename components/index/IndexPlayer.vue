@@ -9,6 +9,7 @@
             :video-id="videoID"
             :player-height="height"
             :player-width="width"
+            :options="options"
             @ready="onReady"
           />
         </client-only>
@@ -29,7 +30,12 @@ export default {
       videoID: '473857681',
       height: 630,
       width: 1124,
-      options: {},
+      options: {
+        color: 'ffffff',
+        byline: false,
+        title: false,
+        portrait: false,
+      },
       playerReady: false,
     }
   },
