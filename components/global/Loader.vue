@@ -30,7 +30,8 @@
               fill: #232323;
             }
             .st1 {
-              font-family: 'NexaLight';
+              font-family: 'Nexa';
+              font-weight: 300;
             }
             .st2 {
               font-size: 9px;
