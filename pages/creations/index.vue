@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <CreaTop />
-    <CreaFilters />
+    <!-- <CreaFilters /> -->
     <CreaList />
   </div>
 </template>

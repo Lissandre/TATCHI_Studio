@@ -28,6 +28,7 @@ a
 *,
 *::before,
 *::after
+  font-family 'Nexa'
   box-sizing border-box
   margin 0
 

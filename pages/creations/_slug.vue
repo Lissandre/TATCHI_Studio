@@ -2,7 +2,7 @@
   <div>
     <ProjectTopInfo :project="project" />
     <ProjectPlayer :motion-id="project.motion_id" />
-    <ProjectMedias :medias="project.medias" v-if="project.medias.length > 0" />
+    <ProjectMedias v-if="project.medias.length > 0" :medias="project.medias" />
   </div>
 </template>
 
