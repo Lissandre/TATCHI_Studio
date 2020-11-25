@@ -80,6 +80,7 @@ export default {
   }),
   methods: {
     start() {
+      window.$crisp.push(['do', 'chat:hide'])
       this.loading = true
       this.animIn = true
     },
@@ -91,6 +92,7 @@ export default {
       setTimeout(() => {
         this.loading = false
         this.animOut = false
+        window.$crisp.push(['do', 'chat:show'])
       }, 1500)
     },
   },
@@ -115,5 +117,4 @@ div
   align-items center
 svg
   width 80%
-  z-index 150
 </style>

@@ -8,7 +8,9 @@ export default {
     host: '0.0.0.0', // par défaut : localhost
   },
   env: {
-    strapiBaseUri,
+    backURL: process.env.API_URL,
+    crispID: process.env.CRISP_ID,
+    gaID: process.env.GA_ID
   },
   head: {
     htmlAttrs: {
@@ -99,7 +101,10 @@ export default {
   },
   loading: '~/components/global/Loader.vue',
   css: ['~layouts/global.css'],
-  plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
+  plugins: [
+    { src: '~plugins/ga.js', mode: 'client' },
+    { src: '~plugins/crisp.js', mode: 'client' },
+  ],
   components: true,
   buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/google-analytics'],
   modules: [

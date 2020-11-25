@@ -2,22 +2,20 @@
   <div class="contactForm">
     <form action="">
       <div>
-        <input id="" ref="lastname" type="text" name="" placeholder="Nom" />
-        <input id="" ref="firstname" type="text" name="" placeholder="Prénom" />
-        <input id="" ref="mail" type="email" name="" placeholder="Mail" />
+        <input ref="lastname" type="text" name="" placeholder="Nom" />
+        <input ref="firstname" type="text" name="" placeholder="Prénom" />
+        <input ref="mail" type="email" name="" placeholder="Mail" />
       </div>
       <div>
         <input
-          id=""
           ref="company"
           type="text"
           name=""
           placeholder="Nom de l'entreprise"
         />
-        <input id="" ref="phone" type="tel" name="" placeholder="Tél" />
+        <input ref="phone" type="tel" name="" placeholder="Tél" />
       </div>
       <textarea
-        id=""
         ref="text"
         name=""
         cols="30"
