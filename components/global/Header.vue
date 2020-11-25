@@ -24,11 +24,13 @@ export default {}
 
 <style lang="stylus">
 #nav
-  z-index 9999
+  z-index 10
   display flex
   justify-content space-between
   padding 2% 10%
   margin 2% 0 6% 0
+  position sticky
+  top 0
   & img
     height 42px
   & ul

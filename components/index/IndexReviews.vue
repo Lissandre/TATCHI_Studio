@@ -96,6 +96,7 @@ export default {
 .arrowContainer
   display flex
   align-items center
+  cursor pointer
 
 .rightArrow
   width 0

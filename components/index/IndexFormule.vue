@@ -12,13 +12,13 @@
           <p>Écrivons votre histoire</p>
         </div>
         <div class="formulePoint">
-          <h4>3. Illustration</h4>
-          <p>Nos meilleurs coups de crayons</p>
+          <h4>4. Animation</h4>
+          <p>Maintenant, il faut que ça bouge !</p>
         </div>
       </div>
       <div class="formulePoint last">
-        <h4>4. Animation</h4>
-        <p>Maintenant, il faut que ça bouge !</p>
+        <h4>3. Illustration</h4>
+        <p>Nos meilleurs coups de crayons</p>
       </div>
     </div>
   </div>
