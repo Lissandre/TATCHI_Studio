@@ -11,26 +11,97 @@ export default {
     strapiBaseUri,
   },
   head: {
-    title: process.env.npm_package_name || '',
+    htmlAttrs: {
+      lang: 'fr',
+    },
+    title: 'TATCHI Studio',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content:
+          'TATCHI Studio est une jeune agence de création de motion design.',
+      },
+      {
+        name: 'msapplication-TileColor',
+        content: process.env.theme_color || '#ffffff',
+      },
+      { name: 'theme-color', content: process.env.theme_color || '#ffffff' },
+
+      {
+        itemprop: 'name',
+        content: 'TATCHI Studio - Création de motion design',
+      },
+      {
+        itemprop: 'description',
+        content:
+          'TATCHI Studio est une agence de création de motion design. Nous décrivons votre projet en une vidéo.',
+      },
+      {
+        itemprop: 'image',
+        content: 'https://studio.tatchi.fr/social/share-1200x630.jpg',
+      },
+
+      { name: 'twitter:card', content: 'summary_large_image' },
+      {
+        name: 'twitter:title',
+        content: 'TATCHI Studio - Création de motion design',
+      },
+      {
+        name: 'twitter:description',
+        content:
+          'TATCHI Studio est une agence de création de motion design. Nous décrivons votre projet en une vidéo.',
+      },
+      {
+        name: 'twitter:image',
+        content: 'https://studio.tatchi.fr/social/share-1200x600.jpg',
+      },
+
+      {
+        property: 'og:site_name',
+        content: 'TATCHI Studio - Création de motion design',
+      },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://studio.tatchi.fr' },
+      {
+        property: 'og:title',
+        content: 'TATCHI Studio - Création de motion design',
+      },
+      {
+        property: 'og:description',
+        content:
+          'TATCHI Studio est une agence de création de motion design. Nous décrivons votre projet en une vidéo.',
+      },
+      {
+        property: 'og:image',
+        content: 'https://studio.tatchi.fr/social/share-1200x630.jpg',
       },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
-      // { rel: 'mask-icon', href: '/favicon.svg', color: '#ffffff' }
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon/favicon.ico' },
+      { rel: 'icon', type: 'image/png', href: 'favicon/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', href: 'favicon/favicon-16x16.png' },
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: 'favicon/apple-touch-icon.png',
+      },
+      { rel: 'manifest', href: 'favicon/site.webmanifest' },
+      {
+        rel: 'mask-icon',
+        href: 'favicon/safari-pinned-tab.svg',
+        color: '#ffffff',
+      },
     ],
   },
   loading: '~/components/global/Loader.vue',
   css: ['~layouts/global.css'],
-  plugins: [],
+  plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
   components: true,
-  buildModules: ['@nuxtjs/eslint-module'],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/google-analytics'],
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
@@ -39,6 +110,9 @@ export default {
   ],
   axios: {
     baseURL: process.env.BASE_URL || 'http://prodstudio.tatchi.fr:8000/', // Used as fallback if no runtime config is provided
+  },
+  googleAnalytics: {
+    id: 'G-04VL6H2FMK',
   },
   publicRuntimeConfig: {
     axios: {

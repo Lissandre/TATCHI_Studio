@@ -11,7 +11,21 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      titre: 'TATCHI Studio - Création de motion design',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'tatchi studio est une agence de création de motion design. Nous décrivons votre projet en une vidéo.',
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style lang="stylus">

@@ -16,5 +16,17 @@ export default {
       project,
     }
   },
+  head() {
+    return {
+      titre: 'TATCHI Studio - Création de motion design',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.project.title}, par TATCHI Studio.`,
+        },
+      ],
+    }
+  },
 }
 </script>

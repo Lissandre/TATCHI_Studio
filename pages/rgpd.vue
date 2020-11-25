@@ -308,7 +308,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      titre: 'TATCHI Studio - Création de motion design',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: '',
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style lang="stylus" scoped>
