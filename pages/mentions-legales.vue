@@ -17,12 +17,16 @@
       <li>Adresse du siège social: 47 Rue De La Ferme, 93100 Montreuil</li>
       <li>
         Responsable publication : TATCHI STUDIO –
-        <a href="mailto:contact@tatchi.fr">contact@tatchi.fr</a>
+        <a rel="noopener noreferrer" href="mailto:contact@tatchi.fr"
+          >contact@tatchi.fr</a
+        >
       </li>
       <li>Le responsable publication est une personne morale.</li>
       <li>
         Webmaster : TATCHI STUDIO –
-        <a href="mailto:webmaster@tatchi.fr">webmaster@tatchi.fr</a>
+        <a rel="noopener noreferrer" href="mailto:webmaster@tatchi.fr"
+          >webmaster@tatchi.fr</a
+        >
       </li>
       <li>Hébergeur : OVH – 2 Rue Kellermann 59100 ROUBAIX</li>
     </ul>

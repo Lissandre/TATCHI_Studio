@@ -245,7 +245,10 @@
     </p>
     <p>
       Pour obtenir plus d’information sur les cookies, vous pouvez consulter le
-      <a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs"
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.cnil.fr/fr/cookies-et-autres-traceurs"
         >site internet de la CNIL</a
       >.
     </p>
@@ -268,9 +271,11 @@
     <p>
       Vous pouvez contacter nos Services afin d’exercer vos droits à l’adresse
       électronique suivante :
-      <a href="mailto:contact@tatchi.fr">contact@tatchi.fr</a> ou à l’adresse
-      postale suivante : 47 rue de la Ferme, 93100 Montreuil, en joignant à
-      votre demande une copie d’un titre d’identité.
+      <a rel="noopener noreferrer" href="mailto:contact@tatchi.fr"
+        >contact@tatchi.fr</a
+      >
+      ou à l’adresse postale suivante : 47 rue de la Ferme, 93100 Montreuil, en
+      joignant à votre demande une copie d’un titre d’identité.
     </p>
     <h3>7. Pouvons-nous modifier la Charte ?</h3>
     <p>
@@ -292,17 +297,24 @@
       vous souhaitez supprimer votre Compte, merci de nous contacter à l’adresse
       postale suivante : 47 rue de la Ferme, 93100 Montreuil (en indiquant "Vie
       Privée - Protection des Données"), ou par email à
-      <a href="mailto:contact@tatchi.fr">contact@tatchi.fr</a>.
+      <a rel="noopener noreferrer" href="mailto:contact@tatchi.fr"
+        >contact@tatchi.fr</a
+      >.
     </p>
     <h3>
       9. La Commission Nationale de l'Informatique et des Libertés ("CNIL")
     </h3>
     <p>
       Nous vous rappelons que vous pouvez contacter la CNIL directement sur le
-      <a href="https://www.cnil.fr/fr/agir%20">site internet de la CNIL</a> ou
-      par courrier à l’adresse suivante : Commission Nationale de l'Informatique
-      et des Libertés (CNIL), 3 Place de Fontenoy - TSA 80715, 75334 PARIS CEDEX
-      07.
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://www.cnil.fr/fr/agir%20"
+        >site internet de la CNIL</a
+      >
+      ou par courrier à l’adresse suivante : Commission Nationale de
+      l'Informatique et des Libertés (CNIL), 3 Place de Fontenoy - TSA 80715,
+      75334 PARIS CEDEX 07.
     </p>
   </div>
 </template>
