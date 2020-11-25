@@ -25,18 +25,6 @@
           style="enable-background: new 0 0 249.8 54;"
           xml:space="preserve"
         >
-          <style type="text/css">
-            .st0 {
-              fill: #232323;
-            }
-            .st1 {
-              font-family: 'Nexa';
-              font-weight: 300;
-            }
-            .st2 {
-              font-size: 9px;
-            }
-          </style>
           <text transform="matrix(1 0 0 1 78.46 52.042)" class="st0 st1 st2">
             STUDIO
           </text>
@@ -110,6 +98,15 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.st0
+  fill #232323
+  color #232323
+.st1
+  font-family 'Nexa'
+  font-weight 300
+.st2
+  font-size 9px
+
 div
   z-index 100
   width 100%

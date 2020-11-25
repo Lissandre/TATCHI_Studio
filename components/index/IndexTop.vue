@@ -21,20 +21,6 @@
       height="54.042"
       viewBox="0 0 249.751 54.042"
     >
-      <defs>
-        <style>
-          .a,
-          .b {
-            fill: gray;
-          }
-          .a {
-            font-size: 9px;
-            font-family: 'Nexa';
-            font-weight: 300;
-            letter-spacing: 0.1em;
-          }
-        </style>
-      </defs>
       <text class="a" transform="translate(78.46 52.042)">
         <tspan x="0" y="0">STUDIO</tspan>
       </text>
@@ -109,6 +95,15 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.a,
+.b
+  color gray
+  fill gray
+.a
+  font-size 9px
+  font-family 'Nexa'
+  font-weight 300
+  letter-spacing 0.1em
 .topPageHome
   text-align center
   color #808080
@@ -148,7 +143,7 @@ button
   transition 0.42s transform ease
   &:hover
     transform scale(0.96)
-img
+svg
   height 54px
 
 @media (max-width: 768px)
