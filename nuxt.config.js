@@ -41,7 +41,7 @@ export default {
       },
       {
         itemprop: 'image',
-        content: `${process.env.BASE_URL}/social/share-1200x630.jpg`,
+        content: `https://studio.tatchi.fr/social/share-1200x630.jpg`,
       },
 
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -56,7 +56,7 @@ export default {
       },
       {
         name: 'twitter:image',
-        content: `${process.env.BASE_URL}/social/share-1200x600.jpg`,
+        content: `https://studio.tatchi.fr/social/share-1200x600.jpg`,
       },
 
       {
@@ -76,7 +76,7 @@ export default {
       },
       {
         property: 'og:image',
-        content: `${process.env.BASE_URL}/social/share-1200x630.jpg`,
+        content: `https://studio.tatchi.fr/social/share-1200x630.jpg`,
       },
     ],
     link: [
