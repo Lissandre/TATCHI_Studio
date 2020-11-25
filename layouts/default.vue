@@ -8,7 +8,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  async fetch() {
+    await this.$strapi.find('motions')
+  },
+}
 </script>
 
 <style lang="stylus">
