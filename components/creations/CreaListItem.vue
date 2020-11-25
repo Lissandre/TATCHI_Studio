@@ -4,11 +4,8 @@
     ref="creation"
     :to="{ name: 'creations-slug', params: { slug: motion.slug } }"
     class="creation"
-    :style="`background-image: url(${getStrapiMedia(
-      motion.cover.formats.medium
-        ? motion.cover.formats.medium.url
-        : motion.cover.formats.thumbnail.url
-    )})`"
+    :style="`background-image: url(${background})`"
+    loading="lazy"
   >
     <div class="title">
       <h4>
@@ -29,6 +26,11 @@ export default {
       default: () => ({}),
     },
   },
+  data() {
+    return {
+      background: getStrapiMedia(this.motion.cover.formats.thumbnail.url),
+    }
+  },
   mounted() {
     const projects = document.querySelectorAll('.creation')
     projects.forEach((project) => {
@@ -39,6 +41,15 @@ export default {
         project.style.height = `${project.offsetWidth}px`
       })
     })
+    if (this.motion.cover.formats.medium) {
+      const mediumBackground = new Image()
+      mediumBackground.src = getStrapiMedia(
+        this.motion.cover.formats.medium.url
+      )
+      mediumBackground.addEventListener('load', () => {
+        this.background = mediumBackground.src
+      })
+    }
   },
   methods: {
     getStrapiMedia,

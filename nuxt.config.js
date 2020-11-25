@@ -89,7 +89,7 @@ export default {
         sizes: '180x180',
         href: 'favicon/apple-touch-icon.png',
       },
-      { rel: 'manifest', href: 'favicon/site.webmanifest' },
+      { rel: 'manifest', href: 'favicon/manifest.json' },
       {
         rel: 'mask-icon',
         href: 'favicon/safari-pinned-tab.svg',

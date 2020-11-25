@@ -19,11 +19,13 @@
             class="oneImage"
             :src="getStrapiMedia(media.medias[indexImage].formats.large.url)"
             alt=""
+            loading="lazy"
           />
           <img
             v-else
             :src="getStrapiMedia(media.medias[indexImage].formats.medium.url)"
             alt=""
+            loading="lazy"
           />
         </div>
       </div>
