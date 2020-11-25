@@ -24,15 +24,15 @@
             <img src="@/assets/images/logos/linkedin.svg" alt="" />
           </a>
         </li>
-        <!-- <li>
+        <li>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/tatchistudio/?igshid=kzitla27rkv0"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src="@/assets/images/logos/instagram.svg" alt="" />
           </a>
-        </li> -->
+        </li>
       </ul>
     </div>
   </footer>
