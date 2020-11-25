@@ -5,7 +5,9 @@
     :to="{ name: 'creations-slug', params: { slug: motion.slug } }"
     class="creation"
     :style="`background-image: url(${getStrapiMedia(
-      motion.cover.formats.thumbnail.url
+      motion.cover.formats.medium
+        ? motion.cover.formats.medium.url
+        : motion.cover.formats.thumbnail.url
     )})`"
   >
     <div class="title">
