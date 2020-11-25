@@ -1,4 +1,4 @@
-const strapiBaseUri = process.env.API_URL || 'https://back.tatchi.fr'
+const strapiBaseUri = process.env.API_URL
 
 export default {
   mode: 'universal',
@@ -41,7 +41,7 @@ export default {
       },
       {
         itemprop: 'image',
-        content: 'https://studio.tatchi.fr/social/share-1200x630.jpg',
+        content: `${process.env.BASE_URL}/social/share-1200x630.jpg`,
       },
 
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -56,7 +56,7 @@ export default {
       },
       {
         name: 'twitter:image',
-        content: 'https://studio.tatchi.fr/social/share-1200x600.jpg',
+        content: `${process.env.BASE_URL}/social/share-1200x600.jpg`,
       },
 
       {
@@ -76,7 +76,7 @@ export default {
       },
       {
         property: 'og:image',
-        content: 'https://studio.tatchi.fr/social/share-1200x630.jpg',
+        content: `${process.env.BASE_URL}/social/share-1200x630.jpg`,
       },
     ],
     link: [
@@ -109,7 +109,7 @@ export default {
     'nuxt-mail',
   ],
   axios: {
-    baseURL: process.env.BASE_URL || 'http://prodstudio.tatchi.fr:8000/', // Used as fallback if no runtime config is provided
+    baseURL: process.env.BASE_URL, // Used as fallback if no runtime config is provided
   },
   googleAnalytics: {
     id: 'G-04VL6H2FMK',
@@ -117,12 +117,12 @@ export default {
   publicRuntimeConfig: {
     axios: {
       browserBaseURL:
-        process.env.BASE_URL || 'http://prodstudio.tatchi.fr:8000/',
+        process.env.BASE_URL,
     },
   },
   privateRuntimeConfig: {
     axios: {
-      baseURL: process.env.BASE_URL || 'http://prodstudio.tatchi.fr:8000/',
+      baseURL: process.env.BASE_URL,
     },
   },
   markdownit: {
@@ -148,7 +148,7 @@ export default {
     },
   },
   strapi: {
-    url: 'https://back.tatchi.fr',
+    url: process.env.API_URL,
     entities: [
       {
         name: 'motions',
