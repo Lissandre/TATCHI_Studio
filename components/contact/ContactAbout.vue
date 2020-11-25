@@ -3,19 +3,17 @@
     <div>
       <p>Qui sommes-nous</p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        Basé aux portes de Paris, Tatchi Studio vous accompagne dans la
+        réalisation de vos vidéos d'animation ou "Motion design". <br />
+        Composée d'une équipe fraiche et réactive, Tatchi Studio anime votre
+        projet afin de le rendre accessible à tout votre auditoire.
       </p>
     </div>
     <div>
       <p>Contactez-nous</p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla
+        Adresse postale : 47 rue de la Ferme, 93100 Montreuil <br />
+        Téléphone : 01 43 60 88 88
       </p>
     </div>
   </div>

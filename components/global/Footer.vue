@@ -9,7 +9,7 @@
           <nuxt-link to="contact">Contact</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="cgu">CGU</nuxt-link>
+          <nuxt-link to="rgpd">Charte RGPD</nuxt-link>
         </li>
       </ul>
     </div>

@@ -1,8 +1,7 @@
 <template>
   <p class="introductionText">
-    <span>Tatchi Studio.</span> Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud
+    <span>Tatchi Studio.</span> Contactez-nous via ce formulaire pour toute
+    demande d'information.
   </p>
 </template>
 
@@ -12,6 +11,7 @@
   color #D0D0D0
   font-size 54px
 span
+  display block
   color #575757
   text-transform uppercase
 
