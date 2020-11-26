@@ -6,12 +6,20 @@
     <IndexOurPoints />
     <IndexNumbers />
     <IndexFormule />
-    <IndexReviews />
+    <IndexReviews v-if="reviews != null" :reviews="reviews" />
   </div>
 </template>
 
 <script>
 export default {
+  async fetch() {
+    this.reviews = await this.$strapi.find('tatchi-studio-reviews')
+  },
+  data() {
+    return {
+      reviews: null,
+    }
+  },
   head() {
     return {
       titre: 'TATCHI Studio - Création de motion design',

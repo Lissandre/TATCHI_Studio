@@ -28,18 +28,17 @@
 <script>
 export default {
   name: 'IndexReviews',
-  async fetch() {
-    this.reviews = await this.$strapi.find('tatchi-studio-reviews')
+  props: {
+    reviews: {
+      type: Array,
+      default: () => ({}),
+    },
   },
   data() {
     return {
       count: 1,
-      reviews: {},
-      total: null,
+      total: Object.keys(this.reviews).length,
     }
-  },
-  mounted() {
-    this.total = Object.keys(this.reviews).length
   },
   methods: {
     changeReview(value) {

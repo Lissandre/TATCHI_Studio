@@ -11,7 +11,6 @@
 export default {
   async fetch() {
     await this.$strapi.find('motions')
-    await this.$strapi.find('tatchi-studio-reviews')
   },
 }
 </script>
