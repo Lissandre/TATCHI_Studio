@@ -30,7 +30,7 @@ export default ({ app }) => {
   /*
    ** Affecter la page courante
    */
-  ga('create', process.env.gaID, 'auto')
+  ga('create', process.env.GA_ID, 'auto')
   /*
    ** Chaque fois que la route change
    */
