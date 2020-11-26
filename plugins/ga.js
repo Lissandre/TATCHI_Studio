@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-export default ({ app }) => {
+export default ({ app, $config: { gaID } }) => {
   /*
    ** Seulement exécuté côté client et en mode production
    */
@@ -30,7 +30,7 @@ export default ({ app }) => {
   /*
    ** Affecter la page courante
    */
-  ga('create', process.env.GA_ID, 'auto')
+  ga('create', gaID, 'auto')
   /*
    ** Chaque fois que la route change
    */

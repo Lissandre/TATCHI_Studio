@@ -1,6 +1,7 @@
-export default () => {
+export default ({ $config: { crispID } }) => {
   window.$crisp = []
-  window.CRISP_WEBSITE_ID = $config.crispID
+  // console.log($config)
+  window.CRISP_WEBSITE_ID = crispID
   ;(function () {
     const d = document
     const s = d.createElement('script')

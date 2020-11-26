@@ -5,11 +5,6 @@ export default {
     port: 8000, // par défaut : 3000
     host: '0.0.0.0', // par défaut : localhost
   },
-  publicRuntimeConfig: {
-    backURL: process.env.API_URL,
-    crispID: process.env.CRISP_ID,
-    gaID: process.env.GA_ID
-  },
   head: {
     htmlAttrs: {
       lang: 'fr',
@@ -121,6 +116,9 @@ export default {
     axios: {
       browserBaseURL: process.env.BASE_URL,
     },
+    backURL: process.env.API_URL,
+    crispID: process.env.CRISP_ID,
+    gaID: process.env.GA_ID,
   },
   privateRuntimeConfig: {
     axios: {
