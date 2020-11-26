@@ -8,12 +8,12 @@
         <div class="review">
           <h5>
             <span>
-              {{ reviews[count - 1].Name }}
+              {{ reviews[count - 1].name }}
             </span>
-            « {{ reviews[count - 1].Role }} »
+            « {{ reviews[count - 1].role }} »
           </h5>
           <p>
-            {{ reviews[count - 1].Review }}
+            {{ reviews[count - 1].review }}
           </p>
         </div>
       </div>
