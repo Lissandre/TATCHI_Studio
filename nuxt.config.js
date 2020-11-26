@@ -154,10 +154,10 @@ export default {
         name: 'motions',
         type: 'collection',
       },
-      // {
-      //   name: 'categories',
-      //   type: 'collection',
-      // },
+      {
+        name: 'tatchi-studio-reviews',
+        type: 'collection',
+      },
       {
         name: 'homepage',
         type: 'single',

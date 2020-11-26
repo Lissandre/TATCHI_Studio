@@ -8,12 +8,12 @@
         <div class="review">
           <h5>
             <span>
-              {{ review.name[count - 1] }}
+              {{ reviews[count - 1].Name }}
             </span>
-            « {{ review.shortDesc[count - 1] }} »
+            « {{ reviews[count - 1].Role }} »
           </h5>
           <p>
-            {{ review.text[count - 1] }}
+            {{ reviews[count - 1].Review }}
           </p>
         </div>
       </div>
@@ -28,22 +28,18 @@
 <script>
 export default {
   name: 'IndexReviews',
+  async fetch() {
+    this.reviews = await this.$strapi.find('tatchi-studio-reviews')
+  },
   data() {
     return {
       count: 1,
-      total: 2,
-      review: {
-        name: ['Jean Marc Zerad', 'Stéphane Goncalves'],
-        shortDesc: [
-          'CEO chez MZ Technologie',
-          "Responsable d'exploitation chez NPP",
-        ],
-        text: [
-          "Tatchi a répondu au pied levé à notre demande. Ils ont restitué à l'image la vision que j'avais pour mon projet.",
-          "L'équipe a reussi à mettre en valeur mon idée de départ sans dénaturer notre marque de fabrique. Je suis fier d'avoir une animation d'une telle qualité pour présenter notre activité.",
-        ],
-      },
+      reviews: {},
+      total: null,
     }
+  },
+  mounted() {
+    this.total = Object.keys(this.reviews).length
   },
   methods: {
     changeReview(value) {
