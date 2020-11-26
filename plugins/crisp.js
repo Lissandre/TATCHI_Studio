@@ -1,6 +1,6 @@
 export default () => {
   window.$crisp = []
-  window.CRISP_WEBSITE_ID = process.env.CRISP_ID
+  window.CRISP_WEBSITE_ID = $config.crispID
   ;(function () {
     const d = document
     const s = d.createElement('script')

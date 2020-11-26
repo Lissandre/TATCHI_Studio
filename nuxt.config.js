@@ -5,7 +5,7 @@ export default {
     port: 8000, // par défaut : 3000
     host: '0.0.0.0', // par défaut : localhost
   },
-  env: {
+  publicRuntimeConfig: {
     backURL: process.env.API_URL,
     crispID: process.env.CRISP_ID,
     gaID: process.env.GA_ID
