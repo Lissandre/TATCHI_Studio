@@ -1,5 +1,3 @@
-const strapiBaseUri = process.env.API_URL
-
 export default {
   mode: 'universal',
   target: 'server',
@@ -117,7 +115,7 @@ export default {
     baseURL: process.env.BASE_URL, // Used as fallback if no runtime config is provided
   },
   googleAnalytics: {
-    id: 'G-04VL6H2FMK',
+    id: process.env.GA_ID,
   },
   publicRuntimeConfig: {
     axios: {
