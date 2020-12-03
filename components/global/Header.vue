@@ -48,4 +48,14 @@ export default {}
         will-change color
         &:hover
           color #000000
+
+@media (min-width: 320px) and (max-width: 480px)
+  #nav
+    padding 2% 4%
+    align-items center
+    & ul li
+      &:first-child
+        margin-right 10px
+      &:last-child
+        margin-left 10px
 </style>

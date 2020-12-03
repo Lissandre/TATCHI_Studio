@@ -110,4 +110,17 @@ export default {
         width 80px
     &.right
       flex-direction row
+
+@media (max-width: 380px)
+  .escComponent
+    & div:first-child
+      width 100%
+      & p
+        width auto
+    & .animation
+      display none
+      & img
+        width 80px
+    &.right
+      flex-direction row
 </style>
