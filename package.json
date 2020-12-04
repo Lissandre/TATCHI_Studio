@@ -11,6 +11,7 @@
     "lint": "npm run lint:js -- --fix"
   },
   "dependencies": {
+    "@ashthornton/asscroll": "^1.7.3",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/strapi": "^0.1.6",
@@ -21,6 +22,7 @@
     "nuxt": "^2.14.0",
     "nuxt-mail": "^1.0.1",
     "nuxt-start": "^2.14.7",
+    "nuxt-typeform": "0.0.1",
     "prevent-scroll": "^2.0.0",
     "uikit": "^3.2.3",
     "vue-lottie-player": "^0.1.9",

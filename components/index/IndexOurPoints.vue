@@ -6,18 +6,6 @@
     </h2>
     <div class="ourPoints">
       <IndexOurPointsBox
-        title="Transparent"
-        text="Vous disposez de votre espace de suivi de projet pour connaître à tous moments l’avancé de votre production."
-        slug="transparent"
-        side="left"
-      />
-      <IndexOurPointsBox
-        title="R.O.I"
-        text="Nos productions sont des outils au service de votre croissance. Chiffres à l’appui."
-        slug="roi"
-        side="right"
-      />
-      <IndexOurPointsBox
         title="Mémorable"
         text="Allégez votre message, le Motion Design retransmettra vos idées de façon claire et mémorisable."
         slug="memorable"
@@ -27,6 +15,18 @@
         title="Original"
         text="Une création sur mesure pour obtenir toute l’attention de votre audience."
         slug="original"
+        side="right"
+      />
+      <IndexOurPointsBox
+        title="Transparent"
+        text="Vous disposez de votre espace de suivi de projet pour connaître à tous moments l’avancé de votre production."
+        slug="transparent"
+        side="left"
+      />
+      <IndexOurPointsBox
+        title="Rentable"
+        text="Nos productions sont des outils au service de votre croissance. Chiffres à l’appui."
+        slug="roi"
         side="right"
       />
     </div>

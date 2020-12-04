@@ -18,9 +18,9 @@
     </div>
     <div class="bloc">
       <div>
-        <p>90<span>%</span></p>
+        <p>3<span>sem</span></p>
       </div>
-      <p>C’est ce que retient une personne d’une vidéo contre 10% d’un texte</p>
+      <p>Le temps de production moyen d'une vidéo explicative</p>
     </div>
     <div class="bloc">
       <div>

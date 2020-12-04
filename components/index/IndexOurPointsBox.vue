@@ -3,7 +3,7 @@
     <div>
       <h3>{{ title }}</h3>
       <p>{{ text }}</p>
-      <a href="#">Lorem</a>
+      <nuxt-link to="production" class="a">Découvrir</nuxt-link>
     </div>
     <div :class="'animation ' + slug">
       <img :src="setImage" alt="" />
@@ -70,7 +70,7 @@ export default {
     color #808080
     width 300px
     margin-bottom 30px
-  & a
+  & .a
     display inline-block
     font-size 14px
     color #d0d0d0
