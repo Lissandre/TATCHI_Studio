@@ -105,7 +105,7 @@ export default {
     '@nuxtjs/markdownit',
     '@nuxtjs/strapi',
     'nuxt-mail',
-    'nuxt-typeform'
+    'nuxt-typeform',
   ],
   axios: {
     baseURL: process.env.BASE_URL, // Used as fallback if no runtime config is provided

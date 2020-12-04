@@ -44,6 +44,16 @@ a
     min-height 85vh
     box-sizing border-box
     overflow-x hidden
+  & .back
+    cursor pointer
+    display flex
+    align-items center
+    position absolute
+    top 20px
+    left 20px
+    z-index 2
+    & img
+      transform translateY(-1px)
 
 ::selection
   color #fff

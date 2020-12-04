@@ -88,12 +88,12 @@ export default {
       setTimeout(() => {
         this.animIn = false
         this.animOut = true
-      }, 700)
+      }, 900)
       setTimeout(() => {
         this.loading = false
         this.animOut = false
         window.$crisp.push(['do', 'chat:show'])
-      }, 1500)
+      }, 1750)
     },
   },
 }

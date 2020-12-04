@@ -30,6 +30,9 @@ export default {
 
 <style lang="stylus" scoped>
 .typeform
+  position absolute
+  top 0
+  left 0
   height 100vh
   width 100%
 </style>
