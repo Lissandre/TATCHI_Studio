@@ -27,6 +27,16 @@
 <script>
 export default {
   name: 'IndexFormule',
+  mounted() {
+    if (window.innerWidth <= 1024) {
+      const points = document.querySelectorAll('.formulePoint')
+      points[3].querySelector('h4').innerHTML = '4. Animation'
+      points[3].querySelector('p').innerHTML =
+        'Maintenant, il faut que ça bouge !'
+      points[2].querySelector('h4').innerHTML = '3. Illustration'
+      points[2].querySelector('p').innerHTML = 'Nos meilleurs coups de crayons'
+    }
+  },
 }
 </script>
 
