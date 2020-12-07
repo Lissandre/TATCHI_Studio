@@ -3,13 +3,13 @@
     <div class="col">
       <ul>
         <li>
-          <nuxt-link to="mentions-legales">Mentions légales</nuxt-link>
+          <nuxt-link to="/mentions-legales">Mentions légales</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="contact">Contact</nuxt-link>
+          <nuxt-link to="/contact">Contact</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="rgpd">Charte RGPD</nuxt-link>
+          <nuxt-link to="/rgpd">Charte RGPD</nuxt-link>
         </li>
       </ul>
     </div>
